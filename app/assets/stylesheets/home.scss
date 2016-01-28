@@ -1,3 +1,182 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: red;
+}
+
+body.composer {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    font-family: "Open Sans","Hevetica Neue","Helvetica",sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.lesson-left-bar {
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    min-width: 250px;
+    width: 25%;
+    height:100vh;
+    float:left;
+}
+
+.lesson-middle-bar{
+  width:50%;
+  background-color: #232c31;
+  height:100vh;
+  float:left;
+  margin: 0 0 0 25%;
+}
+
+.lesson-right-bar{
+  width:25%;
+  height:100vh;
+  float: right;
+}
+
+.lesson-left-bar-header {
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f0f0f0));
+    background-image: -webkit-linear-gradient(top, #fff, #f0f0f0);
+    background-image: linear-gradient(top, #fff, #f0f0f0);
+    background-repeat: repeat-x;
+    height: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.article-inner{
+    max-width: none;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.article-content{
+    margin-top: 20px;
+}
+
+.lesson-course-name {
+   -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    top: 12px;
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 19px;
+    color: #969696;
+    font-weight: bold;
+}
+
+.lesson-ace-editor{
+  /**position: absolute;*/
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    background-color: #232c31;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    direction: ltr;
+    overflow: hidden;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+.lesson-checkpoint-wrapper{
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.lesson-checkpoint{
+  background-color: #ffffff;
+}
+
+/**.lesson-checkpoint .nano{
+  position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}*/
+
+.lesson-checkpoint-inner{
+    padding-bottom: 55px;
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.lesson-checkpoint-name{
+    font-size: 25px;
+    line-height: 1.15;
+    color: #424242;
+    font-weight: bold;
+}
+
+.lesson-checkpoint-instructions{
+  position: relative;
+    padding: 0 0 25px;
+    margin-top: 55px;
+    background-color: #f0faff;
+    border-top: 1px solid #c5dfea;
+    border-bottom: 1px solid #c5dfea;
+}
+
+.lesson-checkpoint-instructions-header{
+  position: relative;
+    top: -1.25em;
+    left: -0.65em;
+    font-size: 13px;
+    color: #424242;
+    text-align: center;
+}
+
+.block-label{
+  display: inline-block;
+    padding: 0 0.65em;
+    height: 2.5em;
+    line-height: 2.4em;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #ffffff;
+    border: 1px solid #c5dfea;
+}
+
+code.xml{
+  padding: 0.15em 0.25em;
+    font-size: 0.85em;
+    line-height: inherit;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.07);
+    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+}
