@@ -28,45 +28,55 @@ body.composer {
     box-sizing: border-box;
 }
 
+.header{
+  background-color: #0B559F;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 8vh;
+}
+
+.footer{
+  background-color: #0B559F;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 7vh;
+}
+
+.lesson{
+  height: 84vh;
+}
+
+/*******left bar*********/
 .lesson-left-bar {
     z-index: 1;
     position: absolute;
-    top: 0px;
-    bottom: 50px;
+    /*top: 0px;
+    bottom: 50px;*/
     left: 0;
     min-width: 250px;
     width: 25%;
-    height:100vh;
+    height:84.5%;
     float:left;
-}
-
-.lesson-middle-bar{
-  width:50%;
-  background-color: #232c31;
-  height:100vh;
-  float:left;
-  margin: 0 0 0 25%;
-}
-
-.lesson-right-bar{
-  width:25%;
-  height:100vh;
-  float: right;
+    background-color:#F0FAFF;
 }
 
 .lesson-left-bar-header {
-    background-color: #fff;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#f0f0f0));
-    background-image: -webkit-linear-gradient(top, #fff, #f0f0f0);
-    background-image: linear-gradient(top, #fff, #f0f0f0);
-    background-repeat: repeat-x;
+    background-color: #c5dfea;
+    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F0FAFF), to(#c5dfea));
+    background-image: -webkit-linear-gradient(top, #F0FAFF, #c5dfea);
+    background-image: linear-gradient(top, #F0FAFF, #c5dfea);
+    background-repeat: repeat-x;*/
     height: 40px;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    /*border-bottom: 1px solid #2A7AB9;*/
 }
 
 .article-inner{
     max-width: none;
-    width: 85%;
+    width: 84%;
     margin: 0 auto;
 }
 
@@ -86,43 +96,21 @@ body.composer {
     padding-right: 10px;
     font-size: 13px;
     line-height: 19px;
-    color: #969696;
+    color: #666666;
     font-weight: bold;
-}
-
-.lesson-ace-editor{
-  /**position: absolute;*/
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 40px;
-    background-color: #232c31;
-    margin-top: 15px;
-    font-size: 14px;
-    line-height: 19px;
-    direction: ltr;
-    overflow: hidden;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
 .lesson-checkpoint-wrapper{
     position: absolute;
-    top: 40px;
+    top: 41px;
     bottom: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color:#F0FAFF;
 }
 
 .lesson-checkpoint{
   background-color: #ffffff;
 }
-
-/**.lesson-checkpoint .nano{
-  position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}*/
 
 .lesson-checkpoint-inner{
     padding-bottom: 55px;
@@ -140,49 +128,164 @@ body.composer {
     line-height: 1.15;
     color: #424242;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .lesson-checkpoint-instructions{
   position: relative;
-    padding: 0 0 25px;
-    margin-top: 55px;
-    background-color: #f0faff;
-    border-top: 1px solid #c5dfea;
-    border-bottom: 1px solid #c5dfea;
+  padding: 0 0 25px;
+  margin-top: 55px;
+  background-color: #c5dfea;
+  border-top: 1px solid #2A7AB9;
+  border-bottom: 1px solid #2A7AB9;
 }
 
 .lesson-checkpoint-instructions-header{
   position: relative;
-    top: -1.25em;
-    left: -0.65em;
-    font-size: 13px;
-    color: #424242;
-    text-align: center;
+  top: -1.25em;
+  left: -0.65em;
+  font-size: 13px;
+  color: #424242;
+  text-align: center;
 }
 
 .block-label{
   display: inline-block;
-    padding: 0 0.65em;
-    height: 2.5em;
-    line-height: 2.4em;
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: #ffffff;
-    border: 1px solid #c5dfea;
+  padding: 0 0.65em;
+  height: 2.5em;
+  line-height: 2.4em;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid #2A7AB9;
 }
 
 code.xml{
   padding: 0.15em 0.25em;
-    font-size: 0.85em;
-    line-height: inherit;
-    border-radius: 2px;
-    background-color: rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.07);
-    font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  font-size: 0.85em;
+  line-height: inherit;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.07);
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+}
+
+/***********middle bar******************/
+.lesson-middle-bar{
+  width:50%;
+  height:100%;
+  float:left;
+  margin: 0 0 0 25%;
+  background-color: #c5dfea;/*#F0FAFF;*/
+}
+
+.lesson-middle-bar-header {
+  background-color: #2A7AB9;/*#c5dfea;#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+.lesson-middle-bar-name {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  top: 12px;
+  padding-right: 10px;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: bold;
+}
+
+.lesson-code-editor{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    direction: ltr;
+    overflow: hidden;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
 .lesson-text-area{
-  position: absolute;
-    overflow: hidden;
-    top: 0;
+  border: 1px solid #c5dfea;
+  position: relative;
+  top: 5px;
+  background-color: #F0FAFF;
+  padding-left: 10px;
+  width: 92%;
+  height: 62vh;
+  left: 20px;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 11pt;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+.button-group{
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+
+.button{
+  display: inline-block;
+  min-width: 110px;
+  margin: 15px 5px 15px 0px;
+  padding: 10px 15px 12px;
+  font: 700 12px/1 'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0,0,0,.1), inset 0 -10px 20px rgba(0,0,0,.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+.button.pri {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+.submit-code { background: #59d; }
+.submit-code:hover { background: #48c; }
+
+.reset-code { background: #555; margin-left:10px;}
+.reset-code:hover { background: #444; }
+
+/***********right bar******************/
+.lesson-right-bar{
+  width:25%;
+  height:100%;
+  float: right;
+  background-color: #c5dfea;
+}
+
+.lesson-right-bar-header {
+  background-color: #2A7AB9;/*#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+#output{
+  height: 80%;
+  border: 5px solid #2A7AB9;
+  margin-top: -20px;
+  background-color: white;
+  margin-right: 15px;
+}
+
+.output-frame{
+  width: 100%;
+  height: 100%;
+  border:none;
+  padding-left: 15px;
+  padding-top: 5px;
 }
