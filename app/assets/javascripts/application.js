@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require ace
+//= require mode-javascript
+//= require theme-dawn
 //= require_tree .

@@ -5,16 +5,20 @@
 var ready;
 ready = function() {
 
-var editor = document.querySelector('#html');
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/textmate");
+editor.getSession().setMode("ace/mode/javascript");
+
+//var editor = document.querySelector('#html');
  
 // Attaching the onkeyup Event
-editor.addEventListener('keyup', function() {
+editor.getSession().on('change', function() {
  
         // The function that'll prepare the code and inject
         // into the iframe.
         render();
  
-    }, false);
+    });
 
 // Base template
 var base_tpl =
@@ -29,12 +33,12 @@ var base_tpl =
     "</html>";
  
 var prepareSource = function() {
-    var html = editor.value,
+    var html = editor.getSession().getValue(); //$(editor).html(),
         src = '';
  
     // HTML
     src = base_tpl.replace('</body>', html + '</body>');
- 
+    console.log(html);
     // CSS
     //css = '<style>' + css + '</style>';
     //src = src.replace('</head>', css + '</head>');
@@ -44,6 +48,7 @@ var prepareSource = function() {
     //src = src.replace('</body>', js + '</body>');
  
     return src;
+    //return $(editor).html();
 }; 
 
 var render = function() {

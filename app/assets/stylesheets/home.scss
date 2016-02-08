@@ -185,19 +185,29 @@ code.xml{
   /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
 }
 
+.lesson-middle-bar-footer{
+  background-color: #2A7AB9;
+    height: 64px;
+    margin-top:-4px;
+}
+
 .lesson-middle-bar-name {
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  position: relative;
-  top: 12px;
-  padding-right: 10px;
-  font-size: 13px;
-  line-height: 19px;
-  font-weight: bold;
+    /* -webkit-transition: -webkit-transform 0.25s ease-in-out; */
+    /* transition: transform 0.25s ease-in-out; */
+    /* transform: translate(0, 0); */
+    -ms-transform: translate(0, 0);
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    /* transform: translate3d(0, 0, 0); */
+    position: relative;
+    /* top: 12px; */
+    padding: 12px;
+    font-size: 14px;
+    line-height: 19px;
+    /* font-weight: bold; */
+    background-color: #c5dfea;//#539DCC;//#F0FAFF;
+    width: 80px;
+    height: 100%;
+    text-align: center;
 }
 
 .lesson-code-editor{
@@ -205,7 +215,7 @@ code.xml{
     left: 0;
     bottom: 0;
     top: 40px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     font-size: 14px;
     line-height: 19px;
     direction: ltr;
@@ -213,14 +223,13 @@ code.xml{
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
-.lesson-text-area{
-  border: 1px solid #c5dfea;
+#editor{
+  border: none;
   position: relative;
-  top: 5px;
-  background-color: #F0FAFF;
+  background-color: #c5dfea;//#539DCC;//#F0FAFF;
   padding-left: 10px;
   width: 92%;
-  height: 62vh;
+  height: 68vh;
   left: 20px;
   overflow: auto;
   outline: none;
@@ -230,6 +239,15 @@ code.xml{
   font-size: 11pt;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
+
+.theme-changes .ace-tm .ace_gutter {
+  background: #c5dfea;
+}
+
+.theme-changes .ace-tm .ace_gutter-active-line {
+background-color : #2A7AB9;
+}
+
 
 .button-group{
   display: block;
@@ -275,8 +293,8 @@ code.xml{
 }
 
 #output{
-  height: 80%;
-  border: 5px solid #2A7AB9;
+  height: 60%;
+  border: 7px solid #2A7AB9;
   margin-top: -20px;
   background-color: white;
   margin-right: 15px;
@@ -289,3 +307,10 @@ code.xml{
   padding-left: 15px;
   padding-top: 5px;
 }
+
+.lesson-right-bar-footer{
+  background-color: #2A7AB9;
+    height: 64px;
+    margin-top:-4px;
+}
+

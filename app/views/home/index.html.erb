@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>HTML Basics</title>
+		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
 	</head>
  <body class='composer'>
  <div class="header"> </div>
@@ -16,7 +17,7 @@
        <div class="lesson-checkpoint-inner">
         <div class="article-inner">
          <div class="article-header">
-          <div class="lesson-checkpoint-name">Make the head</div>
+          <div class="lesson-checkpoint-name"><%= @level.title %></div>
          </div>
          <div class="article-content">
           <p>Everything in our HTML file will go between the opening <code class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></code> and closing <code class="xml"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code> tags.</p>
@@ -48,12 +49,23 @@
       </div>
    </div>
       <div class="lesson-code-editor">
-       <textarea id="html" class="lesson-text-area" wrap="off" autocapitalize="off" spellcheck="false" ></textarea>
+       <!--textarea id="html" class="lesson-text-area" wrap="off" autocapitalize="off" spellcheck="false" > &lt;!DOCTYPE html &gt; &lt;html&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt;	&lt;br&gt;	&lt;/html&gt;</textarea-->
+       <!--div id="html" class="lesson-text-area" contenteditable="true" > &lt;!DOCTYPE html &gt; <br> &lt;html&gt;  <br>  <br> <br> <br> <br> <br> <br> <br> <br>	&lt;/html&gt;</div-->
+     	<div id="editor" class="theme-changes">&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+
+
+
+
+
+
+	
+&lt;/html&gt;</div>
       </div>
-      <div class="button-group">
-       <a class="submit-code button pri"> Save &amp; Submit Code </a>
-       <a class="reset-code button pri">Reset Code</a>
-     </div>
+       <div class="button-group">
+        <a class="submit-code button pri"> Save &amp; Submit Code </a>
+        <a class="reset-code button pri">Reset Code</a>
+      </div>
    </div>
    <div class="lesson-right-bar">
    	 <div class="lesson-right-bar-header"></div>

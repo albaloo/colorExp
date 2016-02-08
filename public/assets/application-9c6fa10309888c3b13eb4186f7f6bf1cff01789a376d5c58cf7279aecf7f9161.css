@@ -1,0 +1,459 @@
+/* line 4, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 11, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: red;
+}
+
+/* line 20, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+body.composer {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  font-family: "Open Sans","Hevetica Neue","Helvetica",sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* line 31, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.header {
+  background-color: #0B559F;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 8vh;
+}
+
+/* line 40, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.footer {
+  background-color: #0B559F;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 7vh;
+}
+
+/* line 49, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson {
+  height: 84vh;
+}
+
+/*******left bar*********/
+/* line 54, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-left-bar {
+  z-index: 1;
+  position: absolute;
+  /*top: 0px;
+  bottom: 50px;*/
+  left: 0;
+  min-width: 250px;
+  width: 25%;
+  height: 84.5%;
+  float: left;
+  background-color: #F0FAFF;
+}
+
+/* line 67, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-left-bar-header {
+  background-color: #c5dfea;
+  /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F0FAFF), to(#c5dfea));
+  background-image: -webkit-linear-gradient(top, #F0FAFF, #c5dfea);
+  background-image: linear-gradient(top, #F0FAFF, #c5dfea);
+  background-repeat: repeat-x;*/
+  height: 40px;
+  /*border-bottom: 1px solid #2A7AB9;*/
+}
+
+/* line 77, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.article-inner {
+  max-width: none;
+  width: 84%;
+  margin: 0 auto;
+}
+
+/* line 83, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.article-content {
+  margin-top: 20px;
+}
+
+/* line 87, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-course-name {
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  top: 12px;
+  padding-right: 10px;
+  font-size: 13px;
+  line-height: 19px;
+  color: #666666;
+  font-weight: bold;
+}
+
+/* line 103, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint-wrapper {
+  position: absolute;
+  top: 41px;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0FAFF;
+}
+
+/* line 111, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint {
+  background-color: #ffffff;
+}
+
+/* line 115, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint-inner {
+  padding-bottom: 55px;
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 126, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint-name {
+  font-size: 25px;
+  line-height: 1.15;
+  color: #424242;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* line 134, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint-instructions {
+  position: relative;
+  padding: 0 0 25px;
+  margin-top: 55px;
+  background-color: #c5dfea;
+  border-top: 1px solid #2A7AB9;
+  border-bottom: 1px solid #2A7AB9;
+}
+
+/* line 143, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-checkpoint-instructions-header {
+  position: relative;
+  top: -1.25em;
+  left: -0.65em;
+  font-size: 13px;
+  color: #424242;
+  text-align: center;
+}
+
+/* line 152, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.block-label {
+  display: inline-block;
+  padding: 0 0.65em;
+  height: 2.5em;
+  line-height: 2.4em;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid #2A7AB9;
+}
+
+/* line 163, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+code.xml {
+  padding: 0.15em 0.25em;
+  font-size: 0.85em;
+  line-height: inherit;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+}
+
+/***********middle bar******************/
+/* line 174, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-middle-bar {
+  width: 50%;
+  height: 100%;
+  float: left;
+  margin: 0 0 0 25%;
+  background-color: #c5dfea;
+  /*#F0FAFF;*/
+}
+
+/* line 182, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-middle-bar-header {
+  background-color: #2A7AB9;
+  /*#c5dfea;#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+/* line 188, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-middle-bar-footer {
+  background-color: #2A7AB9;
+  height: 64px;
+  margin-top: -4px;
+}
+
+/* line 194, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-middle-bar-name {
+  /* -webkit-transition: -webkit-transform 0.25s ease-in-out; */
+  /* transition: transform 0.25s ease-in-out; */
+  /* transform: translate(0, 0); */
+  -ms-transform: translate(0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0); */
+  /* transform: translate3d(0, 0, 0); */
+  position: relative;
+  /* top: 12px; */
+  padding: 12px;
+  font-size: 14px;
+  line-height: 19px;
+  /* font-weight: bold; */
+  background-color: #c5dfea;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+}
+
+/* line 213, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-code-editor {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 40px;
+  /*margin-top: 15px;*/
+  font-size: 14px;
+  line-height: 19px;
+  direction: ltr;
+  overflow: hidden;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+/* line 226, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+#editor {
+  border: none;
+  position: relative;
+  background-color: #c5dfea;
+  padding-left: 10px;
+  width: 92%;
+  height: 68vh;
+  left: 20px;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 11pt;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+/* line 243, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.theme-changes .ace-tm .ace_gutter {
+  background: #c5dfea;
+}
+
+/* line 247, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.theme-changes .ace-tm .ace_gutter-active-line {
+  background-color: #2A7AB9;
+}
+
+/* line 252, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.button-group {
+  display: block;
+  float: left;
+  margin-left: 20px;
+}
+
+/* line 258, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.button {
+  display: inline-block;
+  min-width: 110px;
+  margin: 15px 5px 15px 0px;
+  padding: 10px 15px 12px;
+  font: 700 12px/1 'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+/* line 270, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.button.pri {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 275, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.submit-code {
+  background: #59d;
+}
+
+/* line 276, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.submit-code:hover {
+  background: #48c;
+}
+
+/* line 278, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.reset-code {
+  background: #555;
+  margin-left: 10px;
+}
+
+/* line 279, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.reset-code:hover {
+  background: #444;
+}
+
+/***********right bar******************/
+/* line 282, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-right-bar {
+  width: 25%;
+  height: 100%;
+  float: right;
+  background-color: #c5dfea;
+}
+
+/* line 289, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-right-bar-header {
+  background-color: #2A7AB9;
+  /*#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+/* line 295, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+#output {
+  height: 60%;
+  border: 7px solid #2A7AB9;
+  margin-top: -20px;
+  background-color: white;
+  margin-right: 15px;
+}
+
+/* line 303, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.output-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+/* line 311, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/home.scss */
+.lesson-right-bar-footer {
+  background-color: #2A7AB9;
+  height: 64px;
+  margin-top: -4px;
+}
+/* line 1, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 24, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 28, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 44, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 50, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 58, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, /Users/roshanak/Documents/GitRepository/colorExp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
