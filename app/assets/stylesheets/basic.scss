@@ -1,0 +1,351 @@
+$font_color: #565656;
+$font-size: 13px;
+$success-color: #088A08;
+$error-color: #B40404;
+@mixin basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image) 
+{
+  
+  h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: red;
+}
+
+body.composer {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    font-family: "Open Sans","Hevetica Neue","Helvetica",sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.header{
+  background-color: $darkest_color;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 8vh;
+}
+
+.footer{
+  background-color: $darkest_color;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  align-items: center;
+  padding: 0 8px;
+  width: 100wh;
+  height: 7vh;
+}
+
+.lesson{
+  height: 84vh;
+}
+
+/*******left bar*********/
+.lesson-left-bar {
+    z-index: 1;
+    position: absolute;
+    /*top: 0px;
+    bottom: 50px;*/
+    left: 0;
+    min-width: 250px;
+    width: 25%;
+    height:84.5%;
+    float:left;
+    background-color:$lightest_color;
+}
+
+.lesson-left-bar-header {
+    background-color: $medium-color;
+    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F0FAFF), to(#c5dfea));
+    background-image: -webkit-linear-gradient(top, #F0FAFF, #c5dfea);
+    background-image: linear-gradient(top, #F0FAFF, #c5dfea);
+    background-repeat: repeat-x;*/
+    height: 40px;
+    /*border-bottom: 1px solid $dark_color;*/
+}
+
+.article-inner{
+    max-width: none;
+    width: 84%;
+    margin: 0 auto;
+}
+
+.article-content{
+    margin-top: 20px;
+}
+
+.lesson-course-name {
+   -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    top: 12px;
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 19px;
+    color: #666666;
+    font-weight: bold;
+}
+
+.lesson-checkpoint-wrapper{
+    position: absolute;
+    top: 41px;
+    bottom: 0;
+    width: 100%;
+    background-color:$lightest_color;
+}
+
+.lesson-checkpoint{
+  background-color: #ffffff;
+}
+
+.lesson-checkpoint-inner{
+    padding-bottom: 55px;
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.lesson-checkpoint-name{
+    font-size: 25px;
+    line-height: 1.15;
+    color: #424242;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.lesson-checkpoint-instructions{
+  position: relative;
+  padding: 0 0 25px;
+  margin-top: 55px;
+  background-color: $medium-color;
+  border-top: 1px solid $dark_color;
+  border-bottom: 1px solid $dark_color;
+}
+
+.lesson-checkpoint-instructions-header{
+  position: relative;
+  top: -1.25em;
+  left: -0.65em;
+  font-size: 13px;
+  color: #424242;
+  text-align: center;
+}
+
+.block-label{
+  display: inline-block;
+  padding: 0 0.65em;
+  height: 2.5em;
+  line-height: 2.4em;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border: 1px solid $dark_color;
+}
+
+code.xml{
+  padding: 0.15em 0.25em;
+  font-size: 0.85em;
+  line-height: inherit;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.07);
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+}
+
+/***********middle bar******************/
+.lesson-middle-bar{
+  width:50%;
+  height:100%;
+  float:left;
+  margin: 0 0 0 25%;
+  background-color: $medium-color;/*#F0FAFF;*/
+}
+
+.lesson-middle-bar-header {
+  background-color: $dark_color;/*#c5dfea;#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+.lesson-middle-bar-footer{
+  background-color: $dark_color;
+    height: 64px;
+    margin-top:-4px;
+}
+
+.lesson-middle-bar-name {
+    /* -webkit-transition: -webkit-transform 0.25s ease-in-out; */
+    /* transition: transform 0.25s ease-in-out; */
+    /* transform: translate(0, 0); */
+    -ms-transform: translate(0, 0);
+    /* -webkit-transform: translate3d(0, 0, 0); */
+    /* transform: translate3d(0, 0, 0); */
+    position: relative;
+    /* top: 12px; */
+    padding: 12px;
+    font-size: 14px;
+    line-height: 19px;
+    /* font-weight: bold; */
+    background-color: $medium-color;//#539DCC;//#F0FAFF;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+}
+
+.lesson-code-editor{
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 40px;
+    /*margin-top: 15px;*/
+    font-size: 14px;
+    line-height: 19px;
+    direction: ltr;
+    overflow: hidden;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+#editor{
+  border: none;
+  position: relative;
+  background-color: $medium-color;//#539DCC;//#F0FAFF;
+  padding-left: 10px;
+  width: 92%;
+  height: 68vh;
+  left: 20px;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 11pt;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+.theme-changes .ace-tm .ace_gutter {
+  background: $medium-color;
+}
+
+.theme-changes .ace-tm .ace_gutter-active-line {
+background-color : $dark_color;
+}
+
+.button-container{
+  position:relative;
+}
+
+.button-group{
+  display: block;
+  float: left;
+  /*margin-left: 20px;*/
+  z-index:1;
+}
+
+.button{
+  display: inline-block;
+  min-width: 110px;
+  margin: 15px 5px 15px 0px;
+  padding: 10px 15px 12px;
+  font: 700 12px/1 'Open Sans', sans-serif;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 1px rgba(0,0,0,.1), inset 0 -10px 20px rgba(0,0,0,.1);
+  cursor: pointer;
+  text-align: center;
+}
+
+.button.pri {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+.submit-code {  margin-left: 20px; background: #59d; }
+.submit-code:hover { background: #48c; }
+
+.reset-code { background: #555; margin-left:10px;}
+.reset-code:hover { background: #444; }
+
+.next-level-group{
+  display: none;
+  float: left;
+  position: absolute;
+  top:0px;
+  left:0px;
+  background-color:$dark_color;
+  z-index:10;
+  width:100%;
+}
+
+.check-mark{
+  display: block;
+    margin-left: 25px;
+    top: 20px;
+    position: absolute;
+}
+.success-message{
+  color: #ffffff;
+    font-weight: bold;
+    margin-left:60px;
+    
+}
+.next-level { margin-left:30px; background: $lightest_color; color: #444;}
+.next-level:hover { background: $medium-color; color: #000;}
+
+/***********right bar******************/
+.lesson-right-bar{
+  width:25%;
+  height:100%;
+  float: right;
+  background-color: $medium-color;
+}
+
+.lesson-right-bar-header {
+  background-color: $dark_color;/*#232c31;*/
+  height: 40px;
+  /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+}
+
+#output{
+  height: 60%;
+  border: 7px solid $dark_color;
+  margin-top: -20px;
+  background-color: white;
+  margin-right: 15px;
+}
+
+.output-frame{
+  width: 100%;
+  height: 100%;
+  border:none;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.lesson-right-bar-footer{
+  background-color: $dark_color;
+    height: 64px;
+    margin-top:-4px;
+}
+
+}
