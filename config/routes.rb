@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'home/levels/:num' => 'home#level'
+  
+  get 'home/submitCode' => 'home#submitCode'
+   get 'home/nextLevel' => 'home#nextLevel'
+   
+   get ':controller/:action/:id'
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

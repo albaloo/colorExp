@@ -1,7 +1,7 @@
 namespace :db do
   desc "Fill levels with three level data"
-  task :populate => :environment do
-    Rake::Task['db:reset'].invoke
+  task :populateLevels => :environment do
+    #Rake::Task['db:reset'].invoke
     title = "Why learn HTML?"
     tutorial = "Every webpage you look at is written in a language called HTML. You can think of HTML as the skeleton that gives every webpage structure. In this course, we'll use HTML to add paragraphs, headings, images and links to a webpage. In the editor to the right, there's a tab called test.html. This is the file we'll type our HTML into. See the code with the <>s? That's HTML! Like any language, it has its own special syntax (rules for communicating). When we press Save & Submit Code, the results tab will act like an Internet browser (e.g. Chrome, Firefox, Internet Explorer). A browser's job is to transform the code in test.html into a recognizable webpage! It knows how to lay out the page by following the HTML syntax."
     instruction  = "<ol> <li>To the right, we have a <code class=\"ruby\"><span class=\"identifier\"><span class=\"keymethods\">test</span></span>.<span class=\"identifier\">html</span></code> file. </li>
@@ -9,13 +9,14 @@ namespace :db do
 <li>Hit Save &amp; Submit Code, and you'll see how the <code class=\"ruby\"><span class=\"identifier\"><span class=\"keymethods\">test</span></span>.<span class=\"identifier\">html</span></code> file would look in a browser. Did you see that? The <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"title\">strong</span>&gt;</span><span class=\"tag\">&lt;/<span class=\"title\">strong</span>&gt;</span></code> tags made our text bold!</li>
 </ol>"
     number = 1
-    answer = "<!DOCTYPE html><strong>Feel free to change this text.</strong>"
-    
+    answer = "<!DOCTYPE html><strong>Feel free to change this text.</strong>"   
     Level.create!(:instruction => instruction,
                     :number => number,
                     :answer => answer,
                     :title => title,
                     :tutorial => tutorial)
+                    
+                    
     title = ""
     tutorial = ""
     instruction  = ""
@@ -26,6 +27,7 @@ namespace :db do
                     :answer => answer,
                     :title => title,
                     :tutorial => tutorial)
+                    
     
     title = "Make the head"
     tutorial = " <p>Everything in our HTML file will go between the opening <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"title\">html</span>&gt;</span></code> and closing <code class=\"xml\"><span class=\"tag\">&lt;/<span class=\"title\">html</span>&gt;</span></code> tags.</p>

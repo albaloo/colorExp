@@ -1,13 +1,25 @@
 class HomeController < ApplicationController
-  #before_action :authorize#, except: [:show, :index]
+  before_action :authorize#, except: [:show, :index]
   
   def index
     @level = Level.find_by number: 1
   end
   
+  def show
+    @level = Level.find_by number: 1
+  end
+  
   def nextLevel
-    numLevel = params[:num] + 1
+    numLevel = params[:level]
     @level = Level.find_by number: numLevel
+    puts 'level: ' 
+    puts @level.number
+    render '/home/show'
+  end
+  
+  def submitCode
+    submittedCode = params[:subcode]
+    render :json => { }
   end
   
   def authorize

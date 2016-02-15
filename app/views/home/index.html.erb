@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>HTML Basics</title>
+		<%= stylesheet_link_tag "blue" %>
 		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
 	</head>
  <body class='composer'>
@@ -20,6 +21,7 @@
           <div class="lesson-checkpoint-name"><%= @level.title %></div>
          </div>
          <div class="article-content">
+         	<%= @level.tutorial %>
           <p>Everything in our HTML file will go between the opening <code class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></code> and closing <code class="xml"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code> tags.</p>
           <p>There are always two parts to an HTML file: the head and the body. Let's start with the head.</p>
           <p>The head contains information about your HTML file, like its title. The title is what we see in the browser's title bar or page tab. For example the title of this page is "HTML Basics | Codecademy".</p>
@@ -62,9 +64,16 @@
 	
 &lt;/html&gt;</div>
       </div>
+      <div class="button-container">
        <div class="button-group">
-        <a class="submit-code button pri"> Save &amp; Submit Code </a>
-        <a class="reset-code button pri">Reset Code</a>
+        <a class="submit-code button pri" id="submit-button"> Save &amp; Submit Code </a>
+        <a class="reset-code button pri" id="reset-button">Reset Code</a>
+      </div>
+      <div class="next-level-group" id="level-group">
+      	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
+      	<span class="success-message">Way to go!</a>
+      	<a class="next-level button" id="next-level"> Start Next Lesson </a>
+      </div>
       </div>
    </div>
    <div class="lesson-right-bar">
