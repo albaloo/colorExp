@@ -1,0 +1,8 @@
+@import "basic";
+$darkest_color: #4A4F53;
+$dark_color: #7B8288; 
+$medium-color: #AAAFB5; 
+$light_color: white;
+$lightest_color: #EAEBED;
+$check_image: 'check-white-small.png';
+@include basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image);
