@@ -1,12 +1,24 @@
 class HomeController < ApplicationController
   before_action :authorize#, except: [:show, :index]
   
+  #TODO: at the beginning load the level of the user from db 
+  #TODO: save progress in the DB at the end of each level
   def index
-    @level = Level.find_by number: 1
+    num = params[:num]
+    if num.nil?
+      num = 1
+    end
+    @level = Level.find_by number: num 
+    @color = params[:color]
   end
   
   def show
-    @level = Level.find_by number: 1
+    num = params[:num]
+    if num.nil?
+      num = 1
+    end
+    @level = Level.find_by number: num 
+    @color = params[:color]
   end
   
   def nextLevel
@@ -14,7 +26,7 @@ class HomeController < ApplicationController
     @level = Level.find_by number: numLevel
     puts 'level: ' 
     puts @level.number
-    render '/home/show'
+    render '/home/index/' + params[:color] + '/' + numLevel
   end
   
   def submitCode

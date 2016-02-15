@@ -41,23 +41,6 @@ ready = function() {
     });
   });
  
-  $("#next-level").on("click", function(){
-    var curLevel = parseInt(Storage.get('currentLevel'))+1;
-    Storage.set('currentLevel', curLevel);
-    $.ajax({
-      type:'GET',
-      url:'/home/nextLevel',
-      data: { level: curLevel
-           },
-      success:function(){
-      //change the appearance of this button to next level
-      //$(this).remove();
-      console.log("successs");
-      $("#level-group").toggle();
-      location.reload();
-      }
-    });
-  });
   
   // Attaching the onkeyup Event
   editor.getSession().on('change', function() {

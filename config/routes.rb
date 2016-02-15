@@ -5,14 +5,13 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :users
-  get 'home/index'
-
-  get 'home/levels/:num' => 'home#level'
   
-  get 'home/submitCode' => 'home#submitCode'
-   get 'home/nextLevel' => 'home#nextLevel'
+  #get 'home/levels/:num' => 'home#level'
+  
+  #get 'home/submitCode' => 'home#submitCode'
+  #get 'home/nextLevel' => 'home#nextLevel'
    
-   get ':controller/:action/:id'
+   get ':controller/:action/(:color/(:num))'
    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>HTML Basics</title>
-		<%= stylesheet_link_tag "blue" %>
+		<%= stylesheet_link_tag @color %>
 		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
 	</head>
  <body class='composer'>
@@ -72,7 +72,7 @@
       <div class="next-level-group" id="level-group">
       	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
       	<span class="success-message">Way to go!</a>
-      	<a class="next-level button" id="next-level"> Start Next Lesson </a>
+      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "index", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
       </div>
       </div>
    </div>
