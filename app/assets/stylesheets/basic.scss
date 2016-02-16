@@ -1,7 +1,7 @@
 @mixin basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image) 
 {
   
-  h1 {
+  /*h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -15,6 +15,12 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: red;
+}*/
+
+p, ol, ul, td {
+  font-family: "Open Sans","Hevetica Neue","Helvetica",sans-serif;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 body.composer {
@@ -66,12 +72,7 @@ body.composer {
 
 .lesson-left-bar-header {
     background-color: $medium-color;
-    /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F0FAFF), to(#c5dfea));
-    background-image: -webkit-linear-gradient(top, #F0FAFF, #c5dfea);
-    background-image: linear-gradient(top, #F0FAFF, #c5dfea);
-    background-repeat: repeat-x;*/
     height: 40px;
-    /*border-bottom: 1px solid $dark_color;*/
 }
 
 .article-inner{
@@ -94,8 +95,8 @@ body.composer {
     position: relative;
     top: 12px;
     padding-right: 10px;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 20px;
     color: #666666;
     font-weight: bold;
 }
@@ -144,7 +145,7 @@ body.composer {
   position: relative;
   top: -1.25em;
   left: -0.65em;
-  font-size: 13px;
+  font-size: 14px;
   color: #424242;
   text-align: center;
 }
@@ -160,7 +161,7 @@ body.composer {
   border: 1px solid $dark_color;
 }
 
-code.xml{
+code{
   padding: 0.15em 0.25em;
   font-size: 0.85em;
   line-height: inherit;
@@ -202,7 +203,7 @@ code.xml{
     /* top: 12px; */
     padding: 12px;
     font-size: 14px;
-    line-height: 19px;
+    line-height: 20px;
     /* font-weight: bold; */
     background-color: $medium-color;//#539DCC;//#F0FAFF;
     width: 80px;
@@ -217,7 +218,7 @@ code.xml{
     top: 40px;
     /*margin-top: 15px;*/
     font-size: 14px;
-    line-height: 19px;
+    line-height: 20px;
     direction: ltr;
     overflow: hidden;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;

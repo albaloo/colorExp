@@ -21,10 +21,7 @@
           <div class="lesson-checkpoint-name"><%= @level.title %></div>
          </div>
          <div class="article-content">
-         	<%= @level.tutorial %>
-          <p>Everything in our HTML file will go between the opening <code class="xml"><span class="tag">&lt;<span class="title">html</span>&gt;</span></code> and closing <code class="xml"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code> tags.</p>
-          <p>There are always two parts to an HTML file: the head and the body. Let's start with the head.</p>
-          <p>The head contains information about your HTML file, like its title. The title is what we see in the browser's title bar or page tab. For example the title of this page is "HTML Basics | Codecademy".</p>
+         	<%=raw @level.tutorial %>
          </div>
         </div>
         <div class="lesson-checkpoint-instructions">
@@ -32,13 +29,7 @@
           <div class="block-label">Instructions</div>
          </div>
          <div class="article-inner">
-          <p>Let's add a head and a title to our webpage.</p>
-          <ol>
-          	<li>Add an opening <code class="xml"><span class="tag">&lt;<span class="title">head</span>&gt;</span></code> tag and closing <code class="xml"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code> tag.</li>
-          	<li>Between the <code class="xml"><span class="tag">&lt;<span class="title">head</span>&gt;</span></code> tags, add in an opening <code class="xml"><span class="tag">&lt;<span class="title">title</span>&gt;</span></code> tag and closing <code class="xml"><span class="tag">&lt;/<span class="title">title</span>&gt;</span></code> tag.</li>
-          	<li>Between the <code class="xml"><span class="tag">&lt;<span class="title">title</span>&gt;</span></code> tags, write in a title for your page. For example, "My Webpage." </li>
-          	<li>Press "Save &amp; Submit Code" to continue</li>
-          </ol>
+          <%=raw @level.instruction %>
           </div>
         </div>
       </div>
@@ -51,18 +42,7 @@
       </div>
    </div>
       <div class="lesson-code-editor">
-       <!--textarea id="html" class="lesson-text-area" wrap="off" autocapitalize="off" spellcheck="false" > &lt;!DOCTYPE html &gt; &lt;html&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt; &lt;br&gt;	&lt;br&gt;	&lt;/html&gt;</textarea-->
-       <!--div id="html" class="lesson-text-area" contenteditable="true" > &lt;!DOCTYPE html &gt; <br> &lt;html&gt;  <br>  <br> <br> <br> <br> <br> <br> <br> <br>	&lt;/html&gt;</div-->
-     	<div id="editor" class="theme-changes">&lt;!DOCTYPE html&gt; 
-&lt;html&gt; 
-
-
-
-
-
-
-	
-&lt;/html&gt;</div>
+     	<div id="editor" class="theme-changes"><%=raw @level.defaultcode %></div>
       </div>
       <div class="button-container">
        <div class="button-group">
