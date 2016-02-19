@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require ace
+//= require ace-rails-ap
 //= require mode-javascript
 //= require theme-dawn
 //= require_tree .

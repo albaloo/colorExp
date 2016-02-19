@@ -52,7 +52,7 @@
       <div class="next-level-group" id="level-group">
       	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
       	<span class="success-message">Way to go!</a>
-      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "index", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
+      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
       </div>
       </div>
    </div>

@@ -9,7 +9,8 @@ namespace :db do
     User.create!(:first_name => first,
                     :last_name => last,
                     :email => email,
-                    :password => password)
+                    :password => password,
+                    :color => "blue")
                     
     first = "two"
     last = "two"
@@ -18,7 +19,8 @@ namespace :db do
     User.create!(:first_name => first,
                     :last_name => last,
                     :email => email,
-                    :password => password)
+                    :password => password,
+                    :color => "orange")
                 
     first = "three"
     last = "three"
@@ -27,7 +29,8 @@ namespace :db do
     User.create!(:first_name => first,
                     :last_name => last,
                     :email => email,
-                    :password => password)
+                    :password => password,
+                    :color => "gray")
                      
   end
 end
