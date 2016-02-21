@@ -18,7 +18,7 @@ ready = function() {
 
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/textmate");
-  editor.getSession().setMode("ace/mode/javascript");
+  editor.getSession().setMode("ace/mode/html");
 
   $("#reset-button").on("click", function(){
     editor.getSession().setValue("<!DOCTYPE html>\n<html>\n\n\n\n\n\n\n\n<\/html>");
