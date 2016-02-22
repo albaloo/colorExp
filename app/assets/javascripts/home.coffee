@@ -17,8 +17,21 @@ ready = function() {
   Storage.set('currentLevel', 1); 
 
   var editor = ace.edit("editor");
-  editor.setTheme("ace/theme/textmate");
-  editor.getSession().setMode("ace/mode/html");
+  var color = $('#color').val();
+  if(color == "blue"){
+    editor.setTheme("ace/theme/textmate");
+    editor.getSession().setMode("ace/mode/html");
+  }
+  else if(color == "orange"){
+    editor.setTheme("ace/theme/tomorrow");
+    editor.getSession().setMode("ace/mode/html");
+  }
+  else if(color == "gray"){
+    editor.setTheme("ace/theme/github");
+    editor.getSession().setMode("ace/mode/html");
+  }
+   
+  
 
   $("#reset-button").on("click", function(){
     editor.getSession().setValue("<!DOCTYPE html>\n<html>\n\n\n\n\n\n\n\n<\/html>");
@@ -81,7 +94,9 @@ ready = function() {
     iframe_doc.open();
     iframe_doc.write(source);
     iframe_doc.close();
-  };   
+  }; 
+  
+  render();  
 
 };
 

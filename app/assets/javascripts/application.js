@@ -15,6 +15,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ace-rails-ap
-//= require ace/mode-html
-//= require ace/theme-textmate
 //= require_tree .

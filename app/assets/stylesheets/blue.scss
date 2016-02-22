@@ -5,4 +5,7 @@ $medium-color: #c5dfea;
 $light_color: white;
 $lightest_color: #F0FAFF;
 $check_image: 'check-white-small.png';
+.ace_gutter{background:#c5dfea !important;}
+.ace_active-line{background:#F0FAFF !important;}
+.ace_gutter-active-line{background:#2A7AB9 !important;}
 @include basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image);
