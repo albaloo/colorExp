@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   
   #TODO: at the beginning load the level of the user from db 
   #TODO: save progress in the DB at the end of each level
-  #TODO: change ace mode to html
+  #TODO: PUT A LOGOUT link in header
   def indexx
     num = params[:num]
     if num.nil?
@@ -36,14 +36,25 @@ class HomeController < ApplicationController
       prog.level= numLevel
       prog.save
     end
-    if numLevel == 5
-      #TODO: generate a random code and save it in progress.
-      @code = '1234'
-      render 'final'
-    end
+  
     @level = Level.find_by number: numLevel
-    @color = params[:color]   
-    render 'index'
+    @color = params[:color] 
+    puts "here here here"
+    puts numLevel
+    if numLevel == "5"
+      render 'home/survey'
+    else
+      render 'index'   
+    end  
+   
+  end
+  
+  def submitSurvey
+    #TODO: save answers
+    #TODO: generate a random code and save it in progress.
+    @code = params[:color] + current_user.id.to_s
+    @color = params[:color]
+    render 'final'
   end
   
   def submitCode

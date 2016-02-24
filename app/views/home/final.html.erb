@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Basics</title>
+		<%= stylesheet_link_tag @color %>
+		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
+	</head>
+ <body class='composer'>
+ <div class="header"> </div>
+ <div class="lesson"> 
+   <%= hidden_field_tag "color", @color, { :id => "color" } %>
+   <div class="lesson-final">
+   	<div class="message-box">
+   		Thank you for participating. Please copy the following confirmation code and paste it in the MTurk survey.
+   		<br>
+   		<span class="message-highlight"><%= @code %></span>
+	</div>
+   </div>
+  </div>
+  <div class="footer"> </div>
+ </body>
+</html>	

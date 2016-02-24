@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML Basics</title>
+    <%= stylesheet_link_tag @color %>
+  </head>
+
+<body class='composer'>
+ <div class="header"> </div>
+ <div class="lesson"> 
+   <%= hidden_field_tag "color", @color, { :id => "color" } %>
+   <div class="lesson-final">
+   	<div class="message-box">
+   	 <div class="survey">
+      <p class="survey-title">Please answer the following questions.</p>
+     <%= form_tag("/home/submitSurvey/"+@color, method: "get") do %>
+      <div class="question">
+      <%= label_tag :email %><br>
+      <%= text_field_tag :email %>
+      </div>
+      <div class="question">
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+      <%= submit_tag "submitSurvey" %>
+       <% end %> 
+      </div>
+     </div>
+	</div>
+   </div>
+  </div>
+  <div class="footer"> </div>
+ </body>
+ 
+  <body>
+  	<div class="wrapper">
+  	<div class="login">
+    <p class="title">Welcome!</p>
+     <%= form_tag sessions_path do %>
+      <div class="field">
+      <%= label_tag :email %><br>
+      <%= text_field_tag :email %>
+      </div>
+      <div class="field">
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+      <%= submit_tag "Log In" %>
+       <% end %> 
+      </div>
+     </div>
+    </div>
+  </body>
+</html>
+

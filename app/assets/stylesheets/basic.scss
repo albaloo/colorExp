@@ -23,6 +23,13 @@ p, ol, ul, td {
   line-height: 22px;
 }
 
+pre{
+  background-color: $medium_color;
+  padding: 7px 10px;
+  font-size: 0.85em;
+  overflow: auto;
+  margin: 1em 0px 1em;
+}
 body.composer {
     position: relative;
     overflow: hidden;
@@ -36,7 +43,7 @@ body.composer {
 
 .header{
   background-color: $darkest_color;
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  //border-bottom: 1px solid rgba(0,0,0,0.5);
   align-items: center;
   padding: 0 8px;
   width: 100wh;
@@ -50,6 +57,8 @@ body.composer {
   padding: 0 8px;
   width: 100wh;
   height: 7vh;
+  position:relative;
+  z-index:2;
 }
 
 .lesson{
@@ -65,7 +74,7 @@ body.composer {
     left: 0;
     min-width: 250px;
     width: 25%;
-    height:84.5%;
+    height:90%;
     float:left;
     background-color:$lightest_color;
 }
@@ -343,6 +352,31 @@ background-color : $dark_color;
   background-color: $dark_color;
     height: 64px;
     margin-top:-4px;
+}
+
+/************Final**************/
+.lesson-final{
+  height: 100%;
+    float: right;
+    background-color: #c5dfea;
+    width: 100%;
+}
+.message-box{
+    //height: 40%;
+    border: 7px solid #2A7AB9;
+    background-color: white;
+    margin-right: 15px;
+    margin-top: 20vh;
+    width: 40%;
+    left: 60vh;
+    position: relative;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.message-highlight{
+  color:$dark-color;
 }
 
 }
