@@ -7,7 +7,7 @@
   </head>
 
 <body class='composer'>
- <div class="header"> </div>
+ <div class="header"><%=link_to "Logout", {:controller => "sessions", :action => "destroy"}, :class => "logout-link"%> </div>
  <div class="lesson"> 
    <%= hidden_field_tag "color", @color, { :id => "color" } %>
    <div class="lesson-final">
@@ -16,15 +16,42 @@
       <p class="survey-title">Please answer the following questions.</p>
      <%= form_tag("/home/submitSurvey/"+@color, method: "get") do %>
       <div class="question">
-      <%= label_tag :email %><br>
-      <%= text_field_tag :email %>
+      <%= label_tag(:numlessons, "How many more lessons are you willing to complete?") %><br>
+      <!--%= number_field_tag 'first', nil, in: 0...20 %-->
+      <%= radio_button_tag(:numlessons, "first", false, class: "radio-numlesson") %>
+	  <%= label_tag(:numlessons_first, "none", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "second", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_second, "1", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "third", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_third, "2", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "fourth", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_fourth, "3", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "fifth", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_fifth, "4", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "sixth", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_sixth, "5", class: "label-numlesson") %>
+      <%= radio_button_tag(:numlessons, "seventh", false, class: "radio-numlesson") %>
+      <%= label_tag(:numlessons_seventh, "more than 5", class: "label-numlesson") %>
       </div>
       <div class="question">
-      <%= label_tag :password %><br>
-      <%= password_field_tag :password %>
+      <%= label_tag(:compensation, "How much you are expecting to receive for each additional lesson?") %><br>
+      <%= radio_button_tag(:compensation, "first", false, class: "radio-numlesson") %>
+	  <%= label_tag(:compensation_first, "none", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "second", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_second, "$0.10", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "third", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_third, "$0.20", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "fourth", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_fourth, "$0.30", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "fifth", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_fifth, "$0.40", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "sixth", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_sixth, "$0.50", class: "label-numlesson") %>
+      <%= radio_button_tag(:compensation, "seventh", false, class: "radio-numlesson") %>
+      <%= label_tag(:compensation_seventh, "more than $0.50", class: "label-numlesson") %>
       </div>
-      <div class="actions">
-      <%= submit_tag "submitSurvey" %>
+      <div>
+      <%= submit_tag("Submit", :class=>"submit-code button pri") %>
        <% end %> 
       </div>
      </div>

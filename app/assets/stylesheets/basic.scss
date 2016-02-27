@@ -50,6 +50,22 @@ body.composer {
   height: 8vh;
 }
 
+.logout-link{
+  color: white;
+    font-weight: bold;
+    /* font-size: 15px; */
+    text-decoration: none;
+    margin-top: 10px;
+    float: right;
+    margin-right: 20px
+}
+.logout-link:hover{
+  text-decoration: underline;
+  background:inherit;
+}
+.logout-link:visited{
+  color: white;
+}
 .footer{
   background-color: $darkest_color;
   border-bottom: 1px solid rgba(0,0,0,0.5);
@@ -292,6 +308,10 @@ background-color : $dark_color;
 .reset-code { background: #555; margin-left:10px;}
 .reset-code:hover { background: #444; }
 
+.submit-survey { background: #6b6; }
+.submit-survey:hover { background: #5a5; }
+
+
 .next-level-group{
   display: none;
   float: left;
@@ -358,16 +378,16 @@ background-color : $dark_color;
 .lesson-final{
   height: 100%;
     float: right;
-    background-color: #c5dfea;
+    background-color: $medium-color;
     width: 100%;
 }
 .message-box{
     //height: 40%;
-    border: 7px solid #2A7AB9;
+    border: 7px solid $dark-color;
     background-color: white;
     margin-right: 15px;
     margin-top: 20vh;
-    width: 40%;
+    width: 50%;
     left: 60vh;
     position: relative;
     padding: 30px;
@@ -377,6 +397,28 @@ background-color : $dark_color;
 }
 .message-highlight{
   color:$dark-color;
+}
+
+.question{
+  text-align:left;
+  margin-top:20px;
+  font-size: 15px;
+  font-weight:normal;
+}
+
+.label-numlesson {
+  padding: 2px 1em 0 0;
+}
+
+.radio-numlesson {
+  margin: 2px 0 0 2px;
+}
+
+.radio-hidden{
+  visibility:hidden;
+}
+.survey-title{
+  text-align:left;
 }
 
 }

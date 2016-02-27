@@ -6,12 +6,12 @@
 		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
 	</head>
  <body class='composer'>
- <div class="header"> </div>
+ <div class="header"> <%=link_to "Logout", {:controller => "sessions", :action => "destroy"}, :class => "logout-link"%></div>
  <div class="lesson"> 
    <%= hidden_field_tag "color", @color, { :id => "color" } %>
    <div class="lesson-final">
    	<div class="message-box">
-   		Thank you for participating. Please copy the following confirmation code and paste it in the MTurk survey.
+   		Thank you for participating. Please copy the following confirmation code and paste it in the Amazon Mechanical Turk survey.
    		<br>
    		<span class="message-highlight"><%= @code %></span>
 	</div>

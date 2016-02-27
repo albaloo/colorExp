@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219070539) do
+ActiveRecord::Schema.define(version: 20160226063054) do
 
   create_table "levels", force: :cascade do |t|
     t.string   "title"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20160219070539) do
   end
 
   add_index "progresses", ["user_id"], name: "index_progresses_on_user_id"
+
+  create_table "surveys", force: :cascade do |t|
+    t.string   "first"
+    t.string   "second"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  add_index "surveys", ["user_id"], name: "index_surveys_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"

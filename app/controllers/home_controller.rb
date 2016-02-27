@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
   before_action :authorize#, except: [:show, :index]
   
-  #TODO: at the beginning load the level of the user from db 
-  #TODO: save progress in the DB at the end of each level
-  #TODO: PUT A LOGOUT link in header
+  #TODO: Login page should use a neutral theme to match all theme colors, it's blue now
   def indexx
     num = params[:num]
     if num.nil?
@@ -37,22 +35,25 @@ class HomeController < ApplicationController
       prog.save
     end
   
-    @level = Level.find_by number: numLevel
     @color = params[:color] 
     puts "here here here"
     puts numLevel
     if numLevel == "5"
       render 'home/survey'
     else
+      @level = Level.find_by number: numLevel
       render 'index'   
     end  
    
   end
   
   def submitSurvey
-    #TODO: save answers
-    #TODO: generate a random code and save it in progress.
-    @code = params[:color] + current_user.id.to_s
+    survey = Survey.create!(:first => params[:numlessons], :second => params[:compensation])
+    survey.user = current_user
+    survey.save
+   
+    codegen = String.new(params[:color])
+    @code = codegen.reverse! + current_user.id.to_s
     @color = params[:color]
     render 'final'
   end

@@ -6,7 +6,7 @@
 		<!--script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script-->
 	</head>
  <body class='composer'>
- <div class="header"> </div>
+ <div class="header"> <%=link_to "Logout", {:controller => "sessions", :action => "destroy"}, :class => "logout-link"%> </div>
  <div class="lesson">
   <div class="lesson-left-bar">
    <div class="lesson-left-bar-header">
