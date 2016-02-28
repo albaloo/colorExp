@@ -11,5 +11,6 @@
  * file per style scope.
  *
  *= require basic.scss
+ *= require sessions.scss
  *= require_self
  */
