@@ -34,6 +34,8 @@ gem 'ace-rails-ap'
 
 gem 'rename'
 
+gem 'random_data'
+
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
