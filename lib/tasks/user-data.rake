@@ -30,7 +30,7 @@ namespace :db do
                     :last_name => last,
                     :email => email,
                     :password => password,
-                    :color => "gray")
+                    :color => "gray")   
                      
   end
 end

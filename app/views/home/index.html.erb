@@ -35,35 +35,49 @@
       </div>
      </div>
    </div>
-   <div class="lesson-middle-bar">
+   <div class="lesson-right-bar-wrapper">
    	 <div class="lesson-middle-bar-header">
-      <div class="article-inner">
+      <!--div class="article-inner"-->
        <div class="lesson-middle-bar-name">test.html</div>
-      </div>
-   </div>
+      <!--/div-->
+     </div>
+     <div class="lesson-middle-bar-wrapper">
+   <div class="lesson-middle-bar">
       <div class="lesson-code-editor">
      	<div id="editor" class="theme-changes"><%=raw @level.defaultcode %></div>
-      </div>
-      <div class="button-container">
-       <div class="button-group">
-        <a class="submit-code button pri" id="submit-button"> Save &amp; Submit Code </a>
-        <a class="reset-code button pri" id="reset-button">Reset Code</a>
-      </div>
-      <div class="next-level-group" id="level-group">
-      	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
-      	<span class="success-message">Way to go!</a>
-      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
-      </div>
       </div>
    </div>
    <%= hidden_field_tag "color", @color, { :id => "color" } %>
    <div class="lesson-right-bar">
-   	 <div class="lesson-right-bar-header"></div>
+   	 <!--div class="lesson-right-bar-header"></div-->
    	<section id="output">
 		<iframe class="output-frame">
 			
 		</iframe>
 	</section>
+	<div class="frame-actions">
+		<div class="frame-action-button">
+			<%= link_to image_tag('fullscreen-small.png') + " Full Screen" , "#", :id => 'fullscreen' %>
+		<!--div class="fullscreen-image"><%= image_tag("fullscreen-small.png")%></div>
+		<a class="frame-fullscreen" id="fullscreen">Full Screen</a-->
+		</div>
+	</div>	
+   </div>
+   </div>
+         <div class="button-container">
+       <div class="button-group">
+        <a class="submit-code button pri" id="submit-button"> Save &amp; Submit Code </a>
+        <a class="reset-code button pri" id="reset-button">Reset Code</a>
+       </div>
+       <div class="next-level-group" id="level-group">
+      	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
+      	<span class="success-message">Way to go!</a>
+      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
+       </div>
+       <div class="fail-lesson">
+       	
+       </div>	
+      </div>
    </div>
   </div>
   <div class="footer"> </div>

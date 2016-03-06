@@ -48,7 +48,7 @@ class HomeController < ApplicationController
   end
   
   def submitSurvey
-    survey = Survey.create!(:first => params[:numlessons], :second => params[:compensation])
+    survey = Survey.create!(:first => params[:compensation], :second => params[:compensation])
     survey.user = current_user
     survey.save
    

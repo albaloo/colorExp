@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
     #prog.user = current_user
     #TODO: load color and level
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
+    user = User.find_by_email(params[:username]+"@gmail.com")
+    if user && user.authenticate(params[:username]) #user.authenticate(params[:password])
       session[:user_id] = user.id
       #redirect_to root_url, notice: 'Logged in!'
       num = 1

@@ -1,11 +1,18 @@
 @import "basic";
-$darkest_color: #4A4F53;
-$dark_color: #7B8288; 
-$medium-color: #AAAFB5; 
-$light_color: white;
-$lightest_color: #EAEBED;
+$darkest_color: #353535;//4A4F53;
+$dark_color: #333333; 
+$medium-color: #6D6D6D;
+$medium-light-color: #8D8D8D; 
+$light_color: #AEAEAE;
+$lightest_color: #DDDDDD;
 $check_image: 'check-white-small.png';
-.ace_gutter{background:#AAAFB5 !important;}
-.ace_active-line{background:#EAEBED !important;}
-.ace_gutter-active-line{background:#7B8288 !important;}
-@include basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image);
+.ace_gutter{background:#8D8D8D !important;}
+.ace_active-line{background:#8D8D8D !important;}
+.ace_gutter-active-line{background:#AEAEAE !important;}
+.ace_print-margin{background:#8D8D8D !important;}
+.ace-github .ace_gutter{color:#000 !important;}
+.submit-code {  background: #444 !important;}//#59d; }
+.submit-code:hover { background: #333 !important;}//#48c; }
+.reset-code { background: #777 !important;}
+.reset-code:hover { background: #555 !important; }
+@include basic($darkest_color,$dark_color, $medium-color, $medium-light-color, $light_color, $lightest_color, $check_image);

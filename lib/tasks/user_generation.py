@@ -71,7 +71,7 @@ for i in range(1, NUM_USERS + 1):
 			usernames.add(username)
 			break
 
-	email = username#"{}@gmail.com".format(username)
+	email = "{}@gmail.com".format(username)
  	condition = (i - 1) % NUM_CONDITIONS
         if condition == 0:
             color = "blue"
@@ -79,7 +79,7 @@ for i in range(1, NUM_USERS + 1):
             color = "orange"
         else:
             color = "gray"
-	f.write("\n    User.create!(:first_name => '{}', :last_name => '{}', :email => '{}', :password => '{}', :color => '{}')".format(username, username, username, username, color))
+	f.write("\n    User.create!(:first_name => '{}', :last_name => '{}', :email => '{}', :password => '{}', :color => '{}')".format(username, username, email, username, color))
 
 #f.write("""\n\t('{}', '{}', '{}', {}, {}, {})""".format(
 #		username, hash_pass, email, creation_time, True, condition))

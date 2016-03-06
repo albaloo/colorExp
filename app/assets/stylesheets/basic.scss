@@ -1,4 +1,4 @@
-@mixin basic($darkest_color,$dark_color, $medium-color, $light_color, $lightest_color, $check_image) 
+@mixin basic($darkest_color,$dark_color, $medium-color, $medium-light-color, $light_color, $lightest_color, $check_image) 
 {
   
   /*h1 {
@@ -24,7 +24,7 @@ p, ol, ul, td {
 }
 
 pre{
-  background-color: $medium_color;
+  background-color: $medium_light_color;
   padding: 7px 10px;
   font-size: 0.85em;
   overflow: auto;
@@ -42,12 +42,12 @@ body.composer {
 }
 
 .header{
-  background-color: $darkest_color;
+  background-color: $dark_color;
   //border-bottom: 1px solid rgba(0,0,0,0.5);
   align-items: center;
   padding: 0 8px;
-  width: 100wh;
-  height: 8vh;
+  width: 100%;
+  height: 8%;
 }
 
 .logout-link{
@@ -67,36 +67,36 @@ body.composer {
   color: white;
 }
 .footer{
-  background-color: $darkest_color;
+  background-color: $dark_color;
   border-bottom: 1px solid rgba(0,0,0,0.5);
   align-items: center;
   padding: 0 8px;
-  width: 100wh;
-  height: 7vh;
+  width: 100%;
+  height: 8%;//7vh;
   position:relative;
   z-index:2;
 }
 
 .lesson{
-  height: 84vh;
+  height: 84%;
 }
 
 /*******left bar*********/
 .lesson-left-bar {
     z-index: 1;
-    position: absolute;
+    position: relative;
     /*top: 0px;
     bottom: 50px;*/
     left: 0;
     min-width: 250px;
     width: 25%;
-    height:90%;
+    height:100%;
     float:left;
     background-color:$lightest_color;
 }
 
 .lesson-left-bar-header {
-    background-color: $medium-color;
+    background-color: $light-color;
     height: 40px;
 }
 
@@ -161,9 +161,9 @@ body.composer {
   position: relative;
   padding: 0 0 25px;
   margin-top: 55px;
-  background-color: $medium-color;
-  border-top: 1px solid $dark_color;
-  border-bottom: 1px solid $dark_color;
+  background-color: $light-color;
+  border-top: 1px solid $medium_color;
+  border-bottom: 1px solid $medium_color;
 }
 
 .lesson-checkpoint-instructions-header{
@@ -183,7 +183,7 @@ body.composer {
   font-weight: bold;
   white-space: nowrap;
   background-color: #ffffff;
-  border: 1px solid $dark_color;
+  border: 1px solid $medium_color;
 }
 
 code{
@@ -196,25 +196,36 @@ code{
   font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
 }
 
+/************right bar wrapper**********/
+.lesson-right-bar-wrapper{
+  width:75%;
+  position:relative;
+  float: right;
+  height:100%;
+}
+
+.lesson-middle-bar-wrapper{
+  height:83%;
+}
 /***********middle bar******************/
 .lesson-middle-bar{
-  width:50%;
+  width:65%;
   height:100%;
   float:left;
-  margin: 0 0 0 25%;
-  background-color: $medium-color;/*#F0FAFF;*/
+  //margin: 0 0 0 25%;
+  background-color: $medium-light-color;/*#F0FAFF;*/
 }
 
 .lesson-middle-bar-header {
-  background-color: $dark_color;/*#c5dfea;#232c31;*/
+  background-color: $medium_color;/*#c5dfea;#232c31;*/
   height: 40px;
   /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
 }
 
 .lesson-middle-bar-footer{
-  background-color: $dark_color;
-    height: 64px;
-    margin-top:-4px;
+  //background-color: $dark_color;
+    //height: 64px;
+    //margin-top:-4px;
 }
 
 .lesson-middle-bar-name {
@@ -230,33 +241,34 @@ code{
     font-size: 14px;
     line-height: 20px;
     /* font-weight: bold; */
-    background-color: $medium-color;//#539DCC;//#F0FAFF;
+    background-color: $medium-light-color;//#539DCC;//#F0FAFF;
     width: 80px;
     height: 100%;
     text-align: center;
+    margin-left:60px;
 }
 
 .lesson-code-editor{
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 40px;
-    /*margin-top: 15px;*/
-    font-size: 14px;
-    line-height: 20px;
-    direction: ltr;
-    overflow: hidden;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  margin-top:15px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  direction: ltr;
+  overflow: hidden;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
 #editor{
   border: none;
   position: relative;
-  background-color: $medium-color;//#539DCC;//#F0FAFF;
+  background-color: $medium-light-color;//#539DCC;//#F0FAFF;
   padding-left: 10px;
   width: 92%;
-  height: 68vh;
-  left: 20px;
+  height: 64vh;
+  //left: 20px;
   overflow: auto;
   outline: none;
   -webkit-box-shadow: none;
@@ -271,11 +283,13 @@ code{
 }
 
 .theme-changes .ace-tm .ace_gutter-active-line {
-background-color : $dark_color;
+  background-color : $lightest-color;//$dark_color;
 }
 
 .button-container{
   position:relative;
+  width: 100%;
+    height:10%;
 }
 
 .button-group{
@@ -283,12 +297,15 @@ background-color : $dark_color;
   float: left;
   /*margin-left: 20px;*/
   z-index:1;
+  background-color: $medium_color;
+  //height:40px;
+  width:100%;
 }
 
 .button{
   display: inline-block;
   min-width: 110px;
-  margin: 15px 5px 15px 0px;
+  margin: 10px 5px 10px 0px;
   padding: 10px 15px 12px;
   font: 700 12px/1 'Open Sans', sans-serif;
   border-radius: 3px;
@@ -302,8 +319,8 @@ background-color : $dark_color;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 }
 
-.submit-code {  margin-left: 20px; background: #59d; }
-.submit-code:hover { background: #48c; }
+.submit-code {  margin-left: 20px; background: #888;}//#59d; }
+.submit-code:hover { background: #777;}//#48c; }
 
 .reset-code { background: #555; margin-left:10px;}
 .reset-code:hover { background: #444; }
@@ -318,7 +335,7 @@ background-color : $dark_color;
   position: absolute;
   top:0px;
   left:0px;
-  background-color:$dark_color;
+  background-color:$medium_color;
   z-index:10;
   width:100%;
 }
@@ -338,23 +355,43 @@ background-color : $dark_color;
 .next-level { margin-left:30px; background: $lightest_color; color: #444;}
 .next-level:hover { background: $medium-color; color: #000;}
 
+.fail-lesson{
+  z-index: 1000;
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,z-index 0s linear,left 0s linear;
+    -webkit-transition-delay: 0s, 0s, 0s, 0s;
+    -webkit-transition: opacity 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,z-index 0s linear,left 0s linear;
+    transition: opacity 0.25s ease-in-out,transform 0.25s ease-in-out,z-index 0s linear,left 0s linear;
+    position: absolute;
+    bottom: 80px;
+    padding: 15px 40px 15px 20px;
+    color: #ffffff;
+    background: rgba(53,69,81,0.9) url("/assets/diag-red.png");
+    border: 1px solid #5a2a29;
+    min-width: 460px;
+    width: 60%;
+    transform: translate3d(20px, 0, 0);
+    pointer-events: auto;
+    display:none;
+}
+
 /***********right bar******************/
 .lesson-right-bar{
-  width:25%;
+  width:35%;
   height:100%;
   float: right;
-  background-color: $medium-color;
+  background-color: $medium-light-color;
 }
 
 .lesson-right-bar-header {
-  background-color: $dark_color;/*#232c31;*/
+  background-color: $medium_color;/*#232c31;*/
   height: 40px;
   /*border-bottom: 1px solid rgba(0,0,0,0.5);*/
 }
 
 #output{
   height: 60%;
-  border: 7px solid $dark_color;
+  border: 7px solid $darkest_color;
   margin-top: -20px;
   background-color: white;
   margin-right: 15px;
@@ -372,6 +409,29 @@ background-color : $dark_color;
   background-color: $dark_color;
     height: 64px;
     margin-top:-4px;
+}
+
+.frame-actions{
+  color: #ffffff;
+  font-weight: bold;
+  background: $darkest-color;  
+  margin-right: 15px;
+  height:40px;
+}
+
+.frame-action-button{
+  border-radius: 3px;
+    margin-right: 20px;
+    border-width: 1px;
+    width: 35%;
+   // height: 100%;
+   float:right;
+   margin-top: 5px;
+}
+.frame-action-button:hover { background: $medium-color;}
+#fullscreen{color: white; text-align: center; text-decoration: none; float: right;}
+.frame-action-button img{
+  vertical-align: middle;
 }
 
 /************Final**************/
@@ -411,7 +471,7 @@ background-color : $dark_color;
 }
 
 .radio-numlesson {
-  margin: 2px 0 0 2px;
+  margin: 15px 0 0 2px;
 }
 
 .radio-hidden{

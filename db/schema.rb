@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160226063054) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "levels", force: :cascade do |t|
     t.string   "title"
     t.text     "tutorial"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160226063054) do
     t.integer  "user_id"
   end
 
-  add_index "progresses", ["user_id"], name: "index_progresses_on_user_id"
+  add_index "progresses", ["user_id"], name: "index_progresses_on_user_id", using: :btree
 
   create_table "surveys", force: :cascade do |t|
     t.string   "first"
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160226063054) do
     t.integer  "user_id"
   end
 
-  add_index "surveys", ["user_id"], name: "index_surveys_on_user_id"
+  add_index "surveys", ["user_id"], name: "index_surveys_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
