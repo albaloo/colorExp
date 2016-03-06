@@ -335,7 +335,14 @@ code{
   position: absolute;
   top:0px;
   left:0px;
-  background-color:$medium_color;
+  background: repeating-linear-gradient(
+  -55deg,
+  $medium-light-color, 
+  $medium-light-color 3px,
+  $medium-color 3px,
+  $medium-color 4px
+);
+border: 1px solid $medium-color;
   z-index:10;
   width:100%;
 }
@@ -355,7 +362,7 @@ code{
 .next-level { margin-left:30px; background: $lightest_color; color: #444;}
 .next-level:hover { background: $medium-color; color: #000;}
 
-.fail-lesson{
+#fail-lesson{
   z-index: 1000;
     opacity: 1;
     -webkit-transition: opacity 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out,z-index 0s linear,left 0s linear;
@@ -366,8 +373,16 @@ code{
     bottom: 80px;
     padding: 15px 40px 15px 20px;
     color: #ffffff;
-    background: rgba(53,69,81,0.9) url("/assets/diag-red.png");
-    border: 1px solid #5a2a29;
+   background: repeating-linear-gradient(
+  -55deg,
+  $medium-light-color, 
+  $medium-light-color 3px,
+  $medium-color 3px,
+  $medium-color 4px
+);
+    //background: $dark-color;
+   // background: rgba(53,69,81,0.9) url("/assets/diag-red.png");
+    border: 1px solid $medium-color;
     min-width: 460px;
     width: 60%;
     transform: translate3d(20px, 0, 0);
@@ -375,6 +390,38 @@ code{
     display:none;
 }
 
+.error-message-icon{
+  float: left;
+    display: block;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.7em;
+}
+.error-message{
+ display: block; 
+}
+.error-message-general{
+  font-weight: bold;
+}
+
+.close-error {
+    right: 15px;
+    top: 19px;
+}
+
+.close-success{
+  right: 15px;
+    top: 50%;
+    margin-top: -7px;
+}
+.close-icon {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    background-image: image-url("close-icon-white.png");
+}
 /***********right bar******************/
 .lesson-right-bar{
   width:35%;

@@ -31,29 +31,66 @@ ready = function() {
     editor.getSession().setMode("ace/mode/html");
   }
    
+  $("#close-fail-lesson").on("click", function(){
+    $("#fail-lesson").toggle();
+  });
   
+  $("#close-next-lesson").on("click", function(){
+     $("#level-group").toggle();
+  });
 
   $("#reset-button").on("click", function(){
     editor.getSession().setValue("<!DOCTYPE html>\n<html>\n\n\n\n\n\n\n\n<\/html>");
   });
 
   $("#submit-button").on("click", function(){
+    var isVisible = $( "#fail-lesson" ).is( ":visible" );
+    if(isVisible)
+      $("#fail-lesson").toggle();
+    var levelAnswer = $('#level-answer').val();
     var submittedCode = editor.getSession().getValue();
-    //console.log(submittedCode);
-    $.ajax({
-      type:'GET',
-      url:'/home/submitCode',
-      data: { subcode: submittedCode
+    var validationMessage = validate(levelAnswer, submittedCode);
+    console.log("validationMessage: " + validationMessage);
+    if(validationMessage != ""){
+      $("#validation-error").text(validationMessage);
+      $("#fail-lesson").toggle();
+    }else{  
+      $.ajax({
+        type:'GET',
+        url:'/home/submitCode',
+        data: { subcode: submittedCode
            },
-      success:function(){
-      //change the appearance of this button to next level
-      //$(this).remove();
-      console.log("successs");
-      $("#level-group").toggle();
-      }
-    });
+        success:function(){
+        //change the appearance of this button to next level
+        console.log("successs");
+        $("#level-group").toggle();
+        }
+      });
+    }
   });
  
+  var validate = function(levelAnswer, submittedCode) {
+    console.log("levelAnswer, submittedCode: " + levelAnswer + ", " + submittedCode);
+    var errorMessage = "";
+    //level 1 no validation
+    if(levelAnswer == "<!DOCTYPE html><strong>Feel free to change this text.</strong>" || levelAnswer == submittedCode)
+      return errorMessage;
+    else{
+      var nospace1 = levelAnswer.replace(/\s+/g, '');
+      var nospace2 = submittedCode.replace(/\s+/g, '');
+      if(nospace1 == nospace2)
+        return errorMessage;
+      else{
+        if(submittedCode == "" || !submittedCode.startsWith("<!DOCTYPE html>"))
+          return "Your DOCTYPE tag doesn't look quite right. Did you type it like this: <!DOCTYPE html> ?";
+        else if(!submittedCode.includes("<html>"))
+          return "Make sure you put in your open <html> tag!"
+        else if(!submittedCode.includes("</html>"))
+          return "Make sure you put in your close </html> tag!"
+      }
+    }
+    return errorMessage;
+  }; 
   
   // Attaching the onkeyup Event
   editor.getSession().on('change', function() {

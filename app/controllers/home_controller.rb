@@ -36,9 +36,8 @@ class HomeController < ApplicationController
     end
   
     @color = params[:color] 
-    puts "here here here"
-    puts numLevel
-    if numLevel == "5"
+    #completing three levels.
+    if numLevel == "4" 
       render 'home/survey'
     else
       @level = Level.find_by number: numLevel

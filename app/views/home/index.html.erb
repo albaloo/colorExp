@@ -48,6 +48,7 @@
       </div>
    </div>
    <%= hidden_field_tag "color", @color, { :id => "color" } %>
+   <%= hidden_field_tag "level-answer", @level.answer, { :id => "level-answer" } %>
    <div class="lesson-right-bar">
    	 <!--div class="lesson-right-bar-header"></div-->
    	<section id="output">
@@ -70,12 +71,22 @@
         <a class="reset-code button pri" id="reset-button">Reset Code</a>
        </div>
        <div class="next-level-group" id="level-group">
-      	<div class="check-mark"><%= image_tag("check-white-small.png")%></div>
-      	<span class="success-message">Way to go!</a>
-      	<%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
+       	<div class= "success-message-icon">
+      	  <div class="check-mark"><%= image_tag("check-white-small.png")%></div>
+      	  <span class="success-message">Way to go!</a>
+      	  <%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
+        </div>
+        <div class="close-icon close-success" id="close-next-lesson"></div>
        </div>
-       <div class="fail-lesson">
-       	
+       <div id="fail-lesson">
+       	<div class="error">
+       	  <div class="error-message-icon"><%= image_tag("error-white-small.png")%></div>
+       	  <div class="error-message">
+       		  <span class="error-message-general">Oops, try again. </span>
+       		  <span id="validation-error"></span>
+       	  </div>
+       	</div>
+       	<div class="close-icon close-error" id="close-fail-lesson"></div>
        </div>	
       </div>
    </div>

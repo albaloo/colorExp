@@ -23,7 +23,7 @@ namespace :db do
     tutorial = "<p>HTML stands for <strong>HyperText Markup Language</strong>.  <strong>Hypertext</strong> means \"text with links in it.\" Any time you click on a word that brings you to a new webpage, you've clicked on hypertext!</p><p>A <strong>markup language</strong> is a programming language used to make text do more than just sit on a page: it can turn text into images, links, tables, lists, and much more. HTML is the markup language we'll be learning.</p><p>What makes webpages pretty? That's CSS—<strong>Cascading Style Sheets</strong>. Think of it like skin and makeup that covers the bones of HTML. We'll learn HTML first, then worry about CSS in later courses.</p><p>The first thing we should do is set up the skeleton of the page.</p><p>a. Always put <code class=\"xml\"><span class=\"doctype\">&lt;!DOCTYPE html&gt;</span></code> on the first line. This tells the browser what language it's reading (in this case, HTML).<br>b. Always put <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"xmltitle\">html</span>&gt;</span></code> on the next line. This starts the HTML document.<br>c. Always put <code class=\"xml\"><span class=\"tag\">&lt;/<span class=\"xmltitle\">html</span>&gt;</span></code> on the last line. This ends the HTML document.</p>"
     instruction  = "<ol><li><p>Go ahead and put the three lines mentioned above into <code class=\"ruby\"><span class=\"identifier\"><span class=\"keymethods\">test</span></span>.<span class=\"identifier\">html</span></code>, which is now blank.</p></li><li><p>In between the second and last line (between the <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"xmltitle\">html</span>&gt;</span></code> and the <code class=\"xml\"><span class=\"tag\">&lt;/<span class=\"xmltitle\">html</span>&gt;</span></code>), feel free to write whatever message you like.</p></li></ol>"
     number = 2
-    answer = ""
+    answer = "<!DOCTYPE html><html></html>"
     defaultCode = ""#"&lt;!DOCTYPE html&gt; 
 #&lt;html&gt; 
 #HI 
@@ -55,7 +55,7 @@ namespace :db do
 <li>Press Save &amp; Submit Code to see what you've written appear on the page!</li>
 </ol>"
     number = 3
-    answer = ""
+    answer = "<!DOCTYPE html><html></html>"
     defaultCode = ""#"&lt;!DOCTYPE html&gt; 
 #&lt;html&gt; 
 #Hi!
