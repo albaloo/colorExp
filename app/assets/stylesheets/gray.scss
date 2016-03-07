@@ -1,8 +1,8 @@
 @import "basic";
 $darkest_color: #353535;//4A4F53;
 $dark_color: #333333; 
-$medium-color: #6D6D6D;
-$medium-light-color: #8D8D8D; 
+$medium_color: #6D6D6D;
+$medium_light_color: #8D8D8D; 
 $light_color: #AEAEAE;
 $lightest_color: #DDDDDD;
 $check_image: 'check-white-small.png';
@@ -15,4 +15,4 @@ $check_image: 'check-white-small.png';
 .submit-code:hover { background: #333 !important;}//#48c; }
 .reset-code { background: #777 !important;}
 .reset-code:hover { background: #555 !important; }
-@include basic($darkest_color,$dark_color, $medium-color, $medium-light-color, $light_color, $lightest_color, $check_image);
+@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image);

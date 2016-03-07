@@ -49,6 +49,7 @@
    </div>
    <%= hidden_field_tag "color", @color, { :id => "color" } %>
    <%= hidden_field_tag "level-answer", @level.answer, { :id => "level-answer" } %>
+   <div id="level-default" style="display: none;"><%=raw @level.defaultcode %></div>
    <div class="lesson-right-bar">
    	 <!--div class="lesson-right-bar-header"></div-->
    	<section id="output">

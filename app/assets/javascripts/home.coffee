@@ -30,7 +30,8 @@ ready = function() {
     editor.setTheme("ace/theme/github");
     editor.getSession().setMode("ace/mode/html");
   }
-   
+  editor.focus();
+  editor.renderer.updateFull(); 
   $("#close-fail-lesson").on("click", function(){
     $("#fail-lesson").toggle();
   });
@@ -40,7 +41,8 @@ ready = function() {
   });
 
   $("#reset-button").on("click", function(){
-    editor.getSession().setValue("<!DOCTYPE html>\n<html>\n\n\n\n\n\n\n\n<\/html>");
+    editor.getSession().setValue($('#level-default').text());
+    //editor.getSession().setValue("<!DOCTYPE html>\n<html>\n\n\n\n\n\n\n\n<\/html>");
   });
 
   $("#submit-button").on("click", function(){
@@ -97,7 +99,6 @@ ready = function() {
         // The function that'll prepare the code and inject
         // into the iframe.
         render();
- 
     });
 
   // Base template

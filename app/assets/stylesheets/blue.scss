@@ -1,8 +1,8 @@
 @import "basic";
 $darkest_color: #0B559F;
 $dark_color: #2A7AB9; 
-$medium-color: #539DCC; 
-$medium-light-color: #88BEDC;//#c5dfea; 
+$medium_color: #539DCC; 
+$medium_light_color: #88BEDC;//#c5dfea; 
 $light_color: #c5dfea;//BAD6EA;
 $lightest_color: #F0FAFF;//#DAE8F5;//#F0FAFF;
 $check_image: 'check-white-small.png';
@@ -10,4 +10,4 @@ $check_image: 'check-white-small.png';
 .ace_active-line{background:#88BEDC !important;}
 .ace_gutter-active-line{background:#c5dfea !important;}
 .ace_print-margin{background:#88BEDC !important;}
-@include basic($darkest_color,$dark_color, $medium-color, $medium-light-color, $light_color, $lightest_color, $check_image);
+@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image);

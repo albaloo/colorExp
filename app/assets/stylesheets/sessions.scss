@@ -1,11 +1,12 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$darkest_color: #0B559F;
-$dark_color: #2A7AB9; 
-$medium-color: #c5dfea; 
-$light_color: white;
-$lightest_color: #F0FAFF;
+$darkest_color: #353535;//4A4F53;
+$dark_color: #333333; 
+$medium-color: #6D6D6D;
+$medium-light-color: #8D8D8D; 
+$light_color: #AEAEAE;
+$lightest_color: #DDDDDD;
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -25,7 +26,13 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 20px;
-  background: $medium_color;
+  background: repeating-linear-gradient(
+  -55deg,
+  white, 
+  white 3px,
+  $lightest-color 3px,
+  $lightest-color 4px
+);
 }
 
 .login {

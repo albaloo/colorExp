@@ -1,4 +1,4 @@
-@mixin basic($darkest_color,$dark_color, $medium-color, $medium-light-color, $light_color, $lightest_color, $check_image) 
+@mixin basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image) 
 {
   
   /*h1 {
@@ -96,7 +96,7 @@ body.composer {
 }
 
 .lesson-left-bar-header {
-    background-color: $light-color;
+    background-color: $light_color;
     height: 40px;
 }
 
@@ -161,7 +161,7 @@ body.composer {
   position: relative;
   padding: 0 0 25px;
   margin-top: 55px;
-  background-color: $light-color;
+  background-color: $light_color;
   border-top: 1px solid $medium_color;
   border-bottom: 1px solid $medium_color;
 }
@@ -202,6 +202,7 @@ code{
   position:relative;
   float: right;
   height:100%;
+  background: $medium_color;
 }
 
 .lesson-middle-bar-wrapper{
@@ -213,7 +214,7 @@ code{
   height:100%;
   float:left;
   //margin: 0 0 0 25%;
-  background-color: $medium-light-color;/*#F0FAFF;*/
+  background-color: $medium_light_color;/*#F0FAFF;*/
 }
 
 .lesson-middle-bar-header {
@@ -241,7 +242,7 @@ code{
     font-size: 14px;
     line-height: 20px;
     /* font-weight: bold; */
-    background-color: $medium-light-color;//#539DCC;//#F0FAFF;
+    background-color: $medium_light_color;//#539DCC;//#F0FAFF;
     width: 80px;
     height: 100%;
     text-align: center;
@@ -257,20 +258,20 @@ code{
   font-size: 14px;
   line-height: 20px;
   direction: ltr;
-  overflow: hidden;
+  //overflow: hidden;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
 #editor{
   border: none;
   position: relative;
-  background-color: $medium-light-color;//#539DCC;//#F0FAFF;
+  background-color: $medium_light_color;//#539DCC;//#F0FAFF;
   padding-left: 10px;
   width: 92%;
   height: 64vh;
   //left: 20px;
-  overflow: auto;
-  outline: none;
+  //overflow: auto;
+  //outline: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -279,11 +280,11 @@ code{
 }
 
 .theme-changes .ace-tm .ace_gutter {
-  background: $medium-color;
+  background: $medium_color;
 }
 
 .theme-changes .ace-tm .ace_gutter-active-line {
-  background-color : $lightest-color;//$dark_color;
+  background-color : $lightest_color;//$dark_color;
 }
 
 .button-container{
@@ -337,12 +338,12 @@ code{
   left:0px;
   background: repeating-linear-gradient(
   -55deg,
-  $medium-light-color, 
-  $medium-light-color 3px,
-  $medium-color 3px,
-  $medium-color 4px
+  $medium_light_color, 
+  $medium_light_color 3px,
+  $medium_color 3px,
+  $medium_color 4px
 );
-border: 1px solid $medium-color;
+border: 1px solid $medium_color;
   z-index:10;
   width:100%;
 }
@@ -360,7 +361,7 @@ border: 1px solid $medium-color;
     
 }
 .next-level { margin-left:30px; background: $lightest_color; color: #444;}
-.next-level:hover { background: $medium-color; color: #000;}
+.next-level:hover { background: $medium_color; color: #000;}
 
 #fail-lesson{
   z-index: 1000;
@@ -375,14 +376,14 @@ border: 1px solid $medium-color;
     color: #ffffff;
    background: repeating-linear-gradient(
   -55deg,
-  $medium-light-color, 
-  $medium-light-color 3px,
-  $medium-color 3px,
-  $medium-color 4px
+  $medium_light_color, 
+  $medium_light_color 3px,
+  $medium_color 3px,
+  $medium_color 4px
 );
     //background: $dark-color;
    // background: rgba(53,69,81,0.9) url("/assets/diag-red.png");
-    border: 1px solid $medium-color;
+    border: 1px solid $medium_color;
     min-width: 460px;
     width: 60%;
     transform: translate3d(20px, 0, 0);
@@ -427,7 +428,7 @@ border: 1px solid $medium-color;
   width:35%;
   height:100%;
   float: right;
-  background-color: $medium-light-color;
+  background-color: $medium_light_color;
 }
 
 .lesson-right-bar-header {
@@ -461,7 +462,7 @@ border: 1px solid $medium-color;
 .frame-actions{
   color: #ffffff;
   font-weight: bold;
-  background: $darkest-color;  
+  background: $darkest_color;  
   margin-right: 15px;
   height:40px;
 }
@@ -475,7 +476,7 @@ border: 1px solid $medium-color;
    float:right;
    margin-top: 5px;
 }
-.frame-action-button:hover { background: $medium-color;}
+.frame-action-button:hover { background: $medium_color;}
 #fullscreen{color: white; text-align: center; text-decoration: none; float: right;}
 .frame-action-button img{
   vertical-align: middle;
@@ -485,12 +486,12 @@ border: 1px solid $medium-color;
 .lesson-final{
   height: 100%;
     float: right;
-    background-color: $medium-color;
+    background-color: $medium_color;
     width: 100%;
 }
 .message-box{
     //height: 40%;
-    border: 7px solid $dark-color;
+    border: 7px solid $dark_color;
     background-color: white;
     margin-right: 15px;
     margin-top: 20vh;
@@ -503,7 +504,7 @@ border: 1px solid $medium-color;
     text-align: center;
 }
 .message-highlight{
-  color:$dark-color;
+  color:$dark_color;
 }
 
 .question{
