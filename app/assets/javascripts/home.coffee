@@ -74,8 +74,10 @@ ready = function() {
   var validate = function(levelAnswer, submittedCode) {
     console.log("levelAnswer, submittedCode: " + levelAnswer + ", " + submittedCode);
     var errorMessage = "";
+    levelAnswer = levelAnswer.toLowerCase();
+    submittedCode = submittedCode.toLowerCase();
     //level 1 no validation
-    if(levelAnswer == "<!DOCTYPE html><strong>Feel free to change this text.</strong>" || levelAnswer == submittedCode)
+    if(levelAnswer == "<!doctype html><strong>feel free to change this text.</strong>" || levelAnswer == submittedCode)
       return errorMessage;
     else{
       var nospace1 = levelAnswer.replace(/\s+/g, '');
@@ -83,7 +85,7 @@ ready = function() {
       if(nospace1 == nospace2)
         return errorMessage;
       else{
-        if(submittedCode == "" || !submittedCode.startsWith("<!DOCTYPE html>"))
+        if(submittedCode == "" || !submittedCode.startsWith("<!doctype html>"))
           return "Your DOCTYPE tag doesn't look quite right. Did you type it like this: <!DOCTYPE html> ?";
         else if(!submittedCode.includes("<html>"))
           return "Make sure you put in your open <html> tag!"

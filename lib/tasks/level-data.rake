@@ -49,7 +49,7 @@ namespace :db do
 <p>The last exercise taught us how to set up our HTML file. Everything we do now will go between <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"xmltitle\">html</span>&gt;</span></code> and <code class=\"xml\"><span class=\"tag\">&lt;/<span class=\"xmltitle\">html</span>&gt;</span></code>.</p>
 <p>Practice makes perfect! One more time:</p>"
     instruction  = "<ol>
-<li>Put in the <code class=\"xml\"><span class=\"doctype\">&lt;!DOCTYPE HTML&gt;</span></code> tag.</li>
+<li>Put in the <code class=\"xml\"><span class=\"doctype\">&lt;!DOCTYPE html&gt;</span></code> tag.</li>
 <li>Put in the <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"xmltitle\">html</span>&gt;</span></code> opening and closing tags.</li>
 <li>Between the <code class=\"xml\"><span class=\"tag\">&lt;<span class=\"xmltitle\">html</span>&gt;</span></code> tags, write whatever you like.</li>
 <li>Press Save &amp; Submit Code to see what you've written appear on the page!</li>
