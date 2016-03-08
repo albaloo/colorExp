@@ -23,7 +23,10 @@ class HomeController < ApplicationController
   def course    
     numLevel = params[:num]
     if numLevel.nil?
-      numLevel = 1
+      numLevel = "1"
+    end
+    if numLevel == "0"
+      numLevel = "1"
     end
     prog = Progress.where(:user => current_user).first
     if prog.nil?
