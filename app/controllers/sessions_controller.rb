@@ -11,14 +11,14 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       #redirect_to root_url, notice: 'Logged in!'
       num = 1
-      prog = Progress.where(user: user)
-      if prog.empty?
-        num = 1
-      else
-        num = prog.first.level
-      end
-      puts "num num num"
-      puts num
+      #prog = Progress.where(user: user)
+      #if prog.empty?
+      #  num = 1
+      #else
+      #  num = prog.first.level
+      #end
+      #puts "num num num"
+      #puts num
       redirect_to :controller => "home", :action => "course", :color =>user.color, :num => num, notice: 'Logged in!'
     else
       render :new
