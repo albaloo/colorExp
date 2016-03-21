@@ -13,7 +13,7 @@
    <div class="lesson-final">
    	<div class="message-box">
    	 <div class="survey">
-      <p class="survey-title">Thanks for completing the first three lessons of this course. Please answer the following hypothetical question.</p>
+      <p class="survey-title">Thanks for completing this course. Please answer the following hypothetical question.</p>
      <%= form_tag("/home/submitSurvey/"+@color, method: "get") do %>
       <!--div class="question">
       <%= label_tag(:numlessons, "Imagine that we ask you to complete three more levels, how much we should pay you? $.10 for the middle) This is a hypothetical question.Please answer the following questions.") %><br>
@@ -33,7 +33,7 @@
       <%= label_tag(:numlessons_seventh, "more than 5", class: "label-numlesson") %>
       </div-->
       <div class="question">
-      <%= label_tag(:compensation, "This course has a total of fourteen lessons and you have successfully completed three of them. Now, imagine that we ask you to complete three more lessons, how much we should pay you?") %><br>
+      <%= label_tag(:compensation, "If we were to ask you to complete a similar course, what is the least amount you would accept to be paid?") %><br>
       <%= radio_button_tag(:compensation, "first", false, class: "radio-numlesson", required:'required') %>
 	  <%= label_tag(:compensation_first, "none", class: "label-numlesson") %>
       <%= radio_button_tag(:compensation, "second", false, class: "radio-numlesson", required:'required') %>
