@@ -40,6 +40,8 @@ def numberhash(passw):
 		hashed = ((hashed << 5) - hashed) + ord(passw[i])
 		hashed = hashed & hashed
 	return hashed
+f1 = open('all-users.csv', 'w')
+f1.write("username\n")
 
 f = open('all-users-data.rake', 'w')
 f.write("namespace :db do\n")
@@ -80,7 +82,8 @@ for i in range(1, NUM_USERS + 1):
         else:
             color = "gray"
 	f.write("\n    User.create!(:first_name => '{}', :last_name => '{}', :email => '{}', :password => '{}', :color => '{}')".format(username, username, email, username, color))
-
+	f1.write(username)
+	f1.write("\n")
 #f.write("""\n\t('{}', '{}', '{}', {}, {}, {})""".format(
 #		username, hash_pass, email, creation_time, True, condition))
 #	if i < NUM_USERS:
