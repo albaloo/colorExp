@@ -6,8 +6,11 @@ $medium_light_color: #FF9248;
 $light_color: #FFB38A;
 $lightest_color: #FFD7B5;//#FFD7B5;//#FFEDBD;
 $check_image: 'check-white-small.png';
-.ace_gutter{background:#FF9248 !important;}
-.ace_active-line{background:#FF9248 !important;}
-.ace_gutter-active-line{background:#FFB38A !important;}
-.ace_print-margin{background:#FF9248 !important;}
-@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image);
+$close_icon: 'close-icon-white.png';
+$error_icon: 'error-white-small.png';
+$message_color: white;
+.ace_gutter{background:$medium_light_color !important;}
+.ace_active-line{background:$medium_light_color !important;}
+.ace_gutter-active-line{background:$light_color !important;}
+.ace_print-margin{background:$medium_light_color !important;}
+@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image$close_icon, $error_icon, $message_color);

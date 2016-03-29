@@ -12,3 +12,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( blue.css )
 Rails.application.config.assets.precompile += %w( orange.css )
 Rails.application.config.assets.precompile += %w( gray.css )
+Rails.application.config.assets.precompile += %w( red.css )
+Rails.application.config.assets.precompile += %w( green.css )
+Rails.application.config.assets.precompile += %w( violet.css )
+Rails.application.config.assets.precompile += %w( yellow.css )

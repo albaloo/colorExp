@@ -1,4 +1,4 @@
-@mixin basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image) 
+@mixin basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image, $close_icon, $error_icon, $message_color) 
 {
   
   /*h1 {
@@ -51,7 +51,7 @@ body.composer {
 }
 
 .logout-link{
-  color: white;
+  color: $message_color;
     font-weight: bold;
     /* font-size: 15px; */
     text-decoration: none;
@@ -64,7 +64,7 @@ body.composer {
   background:inherit;
 }
 .logout-link:visited{
-  color: white;
+  color: $message_color;
 }
 .footer{
   background-color: $dark_color;
@@ -351,13 +351,16 @@ border: 1px solid $medium_color;
 .check-mark{
   display: block;
     margin-left: 25px;
-    top: 20px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
     position: absolute;
+    background-image: image-url($check_image);
 }
 .success-message{
-  color: #ffffff;
-    font-weight: bold;
-    margin-left:60px;
+  color: $message_color;
+  font-weight: bold;
+  margin-left:60px;
     
 }
 .next-level { margin-left:30px; background: $lightest_color; color: #444;}
@@ -373,7 +376,7 @@ border: 1px solid $medium_color;
     position: absolute;
     bottom: 80px;
     padding: 15px 40px 15px 20px;
-    color: #ffffff;
+    color: $message_color;
    background: repeating-linear-gradient(
   -55deg,
   $medium_light_color, 
@@ -398,6 +401,7 @@ border: 1px solid $medium_color;
     width: 20px;
     height: 20px;
     margin-right: 0.7em;
+    background-image: image-url($error_icon);
 }
 .error-message{
  display: block; 
@@ -421,7 +425,7 @@ border: 1px solid $medium_color;
     height: 14px;
     cursor: pointer;
     position: absolute;
-    background-image: image-url("close-icon-white.png");
+    background-image: image-url($close_icon);
 }
 /***********right bar******************/
 .lesson-right-bar{

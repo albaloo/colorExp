@@ -20,16 +20,27 @@ ready = function() {
   var color = $('#color').val();
   if(color == "blue"){
     editor.setTheme("ace/theme/textmate");
-    editor.getSession().setMode("ace/mode/html");
   }
   else if(color == "orange"){
     editor.setTheme("ace/theme/tomorrow");
-    editor.getSession().setMode("ace/mode/html");
   }
   else if(color == "gray"){
     editor.setTheme("ace/theme/github");
-    editor.getSession().setMode("ace/mode/html");
   }
+  else if(color == "yellow"){
+    editor.setTheme("ace/theme/clouds");
+  }
+  else if(color == "red"){
+    editor.setTheme("ace/theme/tomorrow");
+  }
+  else if(color == "green"){
+    editor.setTheme("ace/theme/eclipse");
+  }
+  else if(color == "violet"){
+    editor.setTheme("ace/theme/dreamweaver");
+  }
+  editor.getSession().setMode("ace/mode/html");
+  
   editor.focus();
   editor.renderer.updateFull(); 
   $("#close-fail-lesson").on("click", function(){

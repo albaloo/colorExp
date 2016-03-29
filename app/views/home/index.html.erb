@@ -73,7 +73,7 @@
        </div>
        <div class="next-level-group" id="level-group">
        	<div class= "success-message-icon">
-      	  <div class="check-mark"><%= image_tag("check-white-small.png")%></div>
+      	  <div class="check-mark"><!--%= image_tag("check-white-small.png")%--></div>
       	  <span class="success-message">Way to go!</a>
       	  <%=link_to "Start Next Lesson", {:controller => "home", :action => "course", :color =>@color, :num => @level.number+1}, :class => "next-level button"%>	
         </div>
@@ -81,7 +81,7 @@
        </div>
        <div id="fail-lesson">
        	<div class="error">
-       	  <div class="error-message-icon"><%= image_tag("error-white-small.png")%></div>
+       	  <div class="error-message-icon"><!--%= image_tag("error-white-small.png")%--></div>
        	  <div class="error-message">
        		  <span class="error-message-general">Oops, try again. </span>
        		  <span id="validation-error"></span>

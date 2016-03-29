@@ -6,13 +6,16 @@ $medium_light_color: #8D8D8D;
 $light_color: #AEAEAE;
 $lightest_color: #DDDDDD;
 $check_image: 'check-white-small.png';
-.ace_gutter{background:#8D8D8D !important;}
-.ace_active-line{background:#8D8D8D !important;}
-.ace_gutter-active-line{background:#AEAEAE !important;}
-.ace_print-margin{background:#8D8D8D !important;}
+$close_icon: 'close-icon-white.png';
+$error_icon: 'error-white-small.png';
+$message_color: white;
+.ace_gutter{background:$medium_light_color !important;}
+.ace_active-line{background:$medium_light_color !important;}
+.ace_gutter-active-line{background:$light_color !important;}
+.ace_print-margin{background:$medium_light_color !important;}
 .ace-github .ace_gutter{color:#000 !important;}
 .submit-code {  background: #444 !important;}//#59d; }
 .submit-code:hover { background: #333 !important;}//#48c; }
 .reset-code { background: #777 !important;}
 .reset-code:hover { background: #555 !important; }
-@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image);
+@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image, $close_icon, $error_icon, $message_color);

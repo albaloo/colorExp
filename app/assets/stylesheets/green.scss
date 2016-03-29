@@ -1,16 +1,17 @@
 @import "basic";
-$darkest_color: #0B559F;
-$dark_color: #2A7AB9; 
-$medium_color: #539DCC; 
-$medium_light_color: #88BEDC;//#c5dfea; 
-$light_color: #c5dfea;//BAD6EA;
-$lightest_color: #F0FAFF;//#DAE8F5;//#F0FAFF;
+$darkest_color: #0a7e07;//056f00;
+$dark_color: #259b24; 
+$medium_color: #42bd41; 
+$medium_light_color: #72d572;//#c5dfea; 
+$light_color: #a3e9a4;//BAD6EA;
+$lightest_color: #d0F8ce;//#DAE8F5;//#F0FAFF;
 $check_image: 'check-white-small.png';
 $close_icon: 'close-icon-white.png';
-$error_icon: 'error-white-small.png'; 
+$error_icon: 'error-white-small.png';
 $message_color: white;
 .ace_gutter{background:$medium_light_color !important;}
 .ace_active-line{background:$medium_light_color !important;}
 .ace_gutter-active-line{background:$light_color !important;}
 .ace_print-margin{background:$medium_light_color !important;}
+.ace-eclipse .ace_gutter{border-right: none !important;}
 @include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image, $close_icon, $error_icon, $message_color);
