@@ -1,6 +1,6 @@
 namespace :db do
   desc "Fill users with user data"
-  task :populateAllUsers => :environment do
+  task :populateAllUsersRG => :environment do
     User.create!(:first_name => 'testy', :last_name => 'testy', :email => 'testy@gmail.com', :password => 'testy', :color => 'yellow')
     User.create!(:first_name => 'testr', :last_name => 'testr', :email => 'testr@gmail.com', :password => 'testr', :color => 'red')
     User.create!(:first_name => 'testv', :last_name => 'testv', :email => 'testv@gmail.com', :password => 'testv', :color => 'violet')
