@@ -5,7 +5,7 @@ import random, crypt, time, sets
 from passlib.hash import bcrypt
 
 NUM_USERS = 240
-NUM_CONDITIONS = 3
+NUM_CONDITIONS = 4
 
 COMMON_PASS = "HelpGidget!"
 VALID_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
@@ -40,10 +40,10 @@ def numberhash(passw):
 		hashed = ((hashed << 5) - hashed) + ord(passw[i])
 		hashed = hashed & hashed
 	return hashed
-f1 = open('all-users.csv', 'w')
+f1 = open('all-users-rgyv.csv', 'w')
 f1.write("username\n")
 
-f = open('all-users-data.rake', 'w')
+f = open('all-users-data-rgyv.rake', 'w')
 f.write("namespace :db do\n")
 f.write("  desc \"Fill users with user data\"\n")
 f.write("  task :populateAllUsers => :environment do\n")
@@ -76,11 +76,13 @@ for i in range(1, NUM_USERS + 1):
 	email = "{}@gmail.com".format(username)
  	condition = (i - 1) % NUM_CONDITIONS
         if condition == 0:
-            color = "blue"
+            color = "yellow"
         elif condition == 1:
-            color = "orange"
+            color = "red"
+        elif condition == 2:
+			color = "violet"
         else:
-            color = "gray"
+            color = "green"
 	f.write("\n    User.create!(:first_name => '{}', :last_name => '{}', :email => '{}', :password => '{}', :color => '{}')".format(username, username, email, username, color))
 	f1.write(username)
 	f1.write("\n")

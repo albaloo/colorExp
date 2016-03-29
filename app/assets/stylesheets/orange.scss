@@ -13,4 +13,4 @@ $message_color: white;
 .ace_active-line{background:$medium_light_color !important;}
 .ace_gutter-active-line{background:$light_color !important;}
 .ace_print-margin{background:$medium_light_color !important;}
-@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image$close_icon, $error_icon, $message_color);
+@include basic($darkest_color,$dark_color, $medium_color, $medium_light_color, $light_color, $lightest_color, $check_image, $close_icon, $error_icon, $message_color);
